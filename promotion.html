@@ -10,13 +10,13 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- Core theme CSS -->
-    <link rel="stylesheet" href="promotioncss.css">
+    <link rel="stylesheet" href="style-form.css">
 </head>
 
 <body>
     <div class="video-background">
         <video autoplay muted loop id="background-video">
-            <source src="assets/videos/vid6.mp4" type="video/mp4">
+            <source src="assets/videos/vid1.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -26,87 +26,182 @@
             <div class="header-right">
                 <i class="fas fa-bars header-icon header-menu-toggle"></i>
             </div>
-
+            <div class="header-menu">
+                <a href="#">Kategori 1</a>
+                <a href="#">Kategori 2</a>
+                <a href="#">Kategori 3</a>
+                <a href="#">Kategori 4</a>
+            </div>
+        </div>
+        <!-- The Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <img src="assets/images/freetrial.png" alt="Popup Image" width="400px">
+                <a href="https://wa.me/+6281329792579" class="popup-button-ads">Info Lebih Lanjut</a>
+            </div>
+        </div>
+        <script>
+            // Get the popup
+            var popup = document.getElementById("popup");
+            // Get the <span> element that closes the popup
+            var span = document.getElementsByClassName("close")[0];
+            // When the page is loaded, open the popup
+            window.onload = function() {
+                popup.style.display = "block";
+            }
+            // When the user clicks anywhere outside of the popup, close it
+            window.onclick = function(event) {
+                if (event.target === popup) {
+                    popup.style.display = "none"; // Hide the popup
+                }
+            }
+        </script>
         <div class="form-container">
             <h2>Isi Data Diri untuk Klaim!</h2>
-            <div class="form-group">
-                <label for="nama">Nama Anda</label>
-                <input type="text" id="nama" name="nama">
-            </div>
-            <div class="form-group">
-                <label for="handphone">No. Handphone</label>
-                <input type="tel" id="handphone" name="handphone">
-            </div>
-            <div class="form-group">
-                <label for="konfirmasi-handphone">Konfirmasi No. Handphone</label>
-                <input type="tel" id="konfirmasi-handphone" name="konfirmasi-handphone">
-            </div>
-            <div class="form-group">
-                <label for="email">Email Anda</label>
-                <input type="email" id="email" name="email">
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="newsletter" name="newsletter">
-                <label for="newsletter" class="checkbox-label">Berlangganan Newsletter</label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="privacy" name="privacy">
-                <label for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data
-                    privasi</label>
-            </div>
+            <form>
+                <label for="name">Nama</label>
+                <input placeholder="Nama Anda" type="text" id="name" />
+                <label for="phone">No. Handphone</label>
+                <input placeholder="No. Handphone" type="text" id="phone" />
+                <label for="confirm-phone">Konfirmasi No. Handphone</label>
+                <input placeholder="Konfirmasi No. Handphone" type="text" id="confirm-phone" />
+                <label for="email">Email</label>
+                <input placeholder="Email Anda" type="email" id="email" />
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter" class="checkbox-label">Berlangganan Newsletter</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy">
+                    <label for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data
+                        privasi</label>
+                </div>
+            </form>
             <button class="btn-submit">DAFTAR</button>
         </div>
     </div>
-
     <footer>
-        <div class="contact-section">
-            <h1>KONTAK KAMI</h1>
-            <div class="contact-info">
-                <p>Assalaam Olympic Pool Stadium</p>
-                <p>Kawasan Assalaam Barat</p>
-                <p>Jalan Garuda Mas, Mendungan, Pabelan</p>
-                <p>Kecamatan Kartasura, Kabupaten Sukoharjo</p>
-                <p>57102, Jawa Tengah</p>
-                </br>
-                <h2>WhatsApp:</h2>
-                <p>0889 - 0287 - 2779</p>
-                </br>
-                <h2>Email:</h2>
-                <p>assalaamolympicpool@gmail.com</p>
-                </br>
-                <h2>Instagram:
-                </h2>
-                <p>@assalaamolympicpool</p>
-            </div>
-            <div class="waves">
-                <img alt="Decorative wave image" height="50" src="assets/images/waves3.png" width="400" />
-            </div>
-            <div class="operational-hours">
-                <h1>JAM OPERASIONAL</h1>
-                <p>Buka setiap hari</p>
-                <p>Perempuan : 06.00 - 13.00</p>
-                <p>Laki-laki : 13.00 - 21.00</p>
-
-            </div>
-            </br>
-            <div class="operational-hours">
-                <h1>HARGA TIKET MASUK</h1>
-                <p>Rp 25.000 / orang</p>
-            </div>
-            <div class="waves">
-                <img alt="Decorative wave image" height="50" src="assets/images/waves3.png" width="400" />
+        <div class="category-container">
+            <div class="category-foot">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img alt="Icon Kemitraan" src="assets/images/getwet.png" width="48" />
+                    </div>
+                    <h2>GET WET !</h2>
+                </div>
+                <div class="category-info">
+                    <p>Membership</p>
+                    <p>Kelas</p>
+                    <p>Personal Training</p>
+                    <p>Unduh Aplikasi</p>
+                </div>
             </div>
 
-            <div class="find-us">
-                <h1>FIND US</h1>
-                <p><i class="fas fa-envelope"></i> assalaamolympicpool@gmail.com</p>
-                <p><i class="fab fa-facebook"></i> -</p>
-                <p><i class="fab fa-instagram"></i> @assalaamolympicpool</p>
-                <p><i class="fab fa-tiktok"></i> -</p>
+            <div class="category-foot">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img alt="Icon Kemitraan" src="assets/images/jumpwithus.png" width="48" />
+                    </div>
+                    <h2>JUMP WITH US </h2>
+                </div>
+                <div class="category-info">
+                    <p>Jadwal</p>
+                    <p>Lokasi</p>
+                    <p>Fasilitas</p>
+                </div>
             </div>
         </div>
-    </footer>
 
+        <!-- Bagian Kemitraan -->
+        <div class="category-container">
+            <div class="category-foot">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img alt="Icon Kemitraan" src="assets/images/kemitraan.png" width="48" />
+                    </div>
+                    <h2>Kemitraan</h2>
+                </div>
+                <div class="category-info">
+                    <p>Kolaborasi Brand / Company</p>
+                    <p>Korporasi Membership</p>
+                    <p>Self Training</p>
+                </div>
+            </div>
+
+            <div class="category-foot">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img alt="Icon Kemitraan" src="assets/images/tentangkami.png" width="48" />
+                    </div>
+                    <h2>Tentang Kami</h2>
+                </div>
+                <div class="category-info">
+                    <p>Tentang Kami</p>
+                    <p>FAQ</p>
+                    <p>Syarat dan Ketentuan</p>
+                    <p>Unduh Aplikasi</p>
+                </div>
+            </div>
+        </div>
+        <div class="category-container">
+            <div class="category-foot">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img alt="Icon Kemitraan" src="assets/images/tentangkami2.png" width="48" />
+                    </div>
+                    <h2>Tentang Kami</h2>
+                </div>
+                <div class="category-info">
+                    <p>Tentang Kami</p>
+                    <p>FAQ</p>
+                    <p>Syarat dan Ketentuan</p>
+                    <p>Unduh Aplikasi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div class="category-foot">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img alt="Icon Kemitraan" src="assets/images/layanankonsumen.png" width="48" />
+                    </div>
+                    <h2>LAYANAN OPERASIONAL</h2>
+                </div>
+                <div class="contact-info">
+                    <p>Assalaam Olympic Pool Stadium</p>
+                    <p>Kawasan Assalaam Barat</p>
+                    <p>Jalan Garuda Mas, Mendungan, Pabelan</p>
+                    <p>Kecamatan Kartasura, Kabupaten Sukoharjo</p>
+                    <p> 57102, Jawa Tengah</p>
+                    <h3>WhatsApp:</h3>
+                    <p>0889 - 0287 - 2779</p>
+                    <h3>Email:</h3>
+                    <p>assalaamolympicpool@gmail.com</p>
+                    <h3>Instagram:</h3>
+                    <p>@assalaamolympicpool</p>
+                </div>
+
+                <div class="find-us">
+                    <div class="category-foot">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <img alt="Icon Kemitraan" src="assets/images/findus.png" width="48" />
+                            </div>
+                            <h2>FIND US</h2>
+                        </div>
+                        <p><i class="fas fa-envelope"></i> assalaamolympicpool@gmail.com</p>
+                        <p><i class="fab fa-facebook"></i> -</p>
+                        <p><i class="fab fa-instagram"></i> @assalaamolympicpool</p>
+                        <p><i class="fab fa-tiktok"></i> -</p>
+                    </div>
+                </div>
+    </footer>
+    <script>
+        document.querySelector('.header-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.header-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
