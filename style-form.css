@@ -124,6 +124,12 @@ body {
     margin-right: 10px;
 }
 
+.readable-paragraph {
+    line-height: 1.6; /* Adjust this value as needed */
+    margin-bottom: 15px; /* Optional: Add space below the paragraph */
+    text-align: justify;
+}
+
 .form-container {
     background-color: #FFE500;
     padding: 20px;
@@ -467,6 +473,36 @@ footer {
 
     p {
         font-size: 12px;
+    }
+
+    .category-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    #get-wet {
+        order: 1; /* First item */
+    }
+
+    #jump-with-us {
+        order: 2; /* Second item */
+    }
+
+    #kemitraan {
+        order: 3; /* Third item */
+    }
+
+    #tentang-kami {
+        order: 4; /* Fourth item */
+    }
+
+    .category-info p {
+        margin: 20px 20px 20px 40px;
+        /* Jarak antara setiap kategori */
+        color: white;
+        /* Ubah warna teks jika perlu */
+        font-size: 12px;
+        /* Sesuaikan ukuran font jika perlu */
     }
 
     .contact-info p,
