@@ -16,7 +16,7 @@
 <body>
     <div class="video-background">
         <video autoplay muted loop id="background-video">
-            <source src="assets/videos/vid1.mp4" type="video/mp4">
+            <source src="assets/videos/backgroundvid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -37,27 +37,25 @@
             // Get the <span> element that closes the popup
             var span = document.getElementsByClassName("close")[0];
             // When the page is loaded, open the popup
-            window.onload = function() {
+            window.onload = function () {
                 popup.style.display = "block";
             }
             // When the user clicks anywhere outside of the popup, close it
-            window.onclick = function(event) {
+            window.onclick = function (event) {
                 if (event.target === popup) {
                     popup.style.display = "none"; // Hide the popup
                 }
             }
         </script>
         <div class="form-container">
-            <h2>Isi Data Diri untuk Klaim!</h2>
+            <h2>Isi Data Diri Untuk Daftar!</h2>
             <form>
                 <label for="name">Nama</label>
                 <input placeholder="Nama Anda" type="text" id="name" />
                 <label for="phone">No. Handphone</label>
                 <input placeholder="No. Handphone" type="text" id="phone" />
-                <label for="confirm-phone">Konfirmasi No. Handphone</label>
-                <input placeholder="Konfirmasi No. Handphone" type="text" id="confirm-phone" />
                 <label for="email">Email</label>
-                <input placeholder="Email Anda" type="email" id="email" />
+                <input placeholder="Email Anda" type="text" id="email" />
                 <div class="checkbox-group">
                     <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter" class="checkbox-label">Berlangganan Newsletter</label>
@@ -168,7 +166,8 @@
                     <h3>Email:</h3>
                     <p>assalaamolympicpool@gmail.com</p>
                     <h3>Instagram:</h3>
-                    <p><a href="https://www.instagram.com/assalaamolympicpool/" style="color: white;">@assalaamolympicpool</a></p>
+                    <p><a href="https://www.instagram.com/assalaamolympicpool"
+                            style="color: white;">@assalaamolympicpool</a></p>
                 </div>
                 <div class="find-us">
                     <div class="category-foot">
@@ -178,15 +177,17 @@
                             </div>
                             <h2>FIND US</h2>
                         </div>
-                        <p><i class="fas fa-envelope"></i><a href="mailto:assalaamolympicpool@gmail.com" target="_blank" rel="noopener noreferrer">assalaamolympicpool@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i><a href="mailto:assalaamolympicpool@gmail.com" target="_blank"
+                                rel="noopener noreferrer">assalaamolympicpool@gmail.com</p>
                         <p><i class="fab fa-facebook"></i> -</p>
-                        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/assalaamolympicpool/" target="_blank" rel="noopener noreferrer">@assalaamolympicpool</a></p>
+                        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/assalaamolympicpool/"
+                                target="_blank" rel="noopener noreferrer">@assalaamolympicpool</a></p>
                         <p><i class="fab fa-tiktok"></i> -</p>
                     </div>
                 </div>
     </footer>
     <script>
-        document.querySelector('.header-menu-toggle').addEventListener('click', function() {
+        document.querySelector('.header-menu-toggle').addEventListener('click', function () {
             document.querySelector('.header-menu').classList.toggle('active');
         });
     </script>

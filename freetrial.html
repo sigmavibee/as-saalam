@@ -9,7 +9,7 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="style-form.css">
-   
+
 </head>
 
 <body>
@@ -23,13 +23,13 @@
         <div class="header">
             <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
         </div>
-        <h1>Let's GET WET</h1>
+        <h1>LET'S GET WET!</h1>
         <div class="features">
-            <ul style="list-style-type: disc; padding-left: 20px; font-size: 20px; line-height: 2;">
-                <li>Kursus renang di kolam renang dengan standar Olympic</li>
-                <li>Pelatih berpengalaman dan bersertifikasi internasional</li>
-                <li>Menggunakan kurikulum aquatic yang telah teruji</li>
-            </ul>
+
+            <li>Kursus renang di kolam renang dengan standar Olympic</li>
+            <li>Pelatih berpengalaman dan bersertifikasi internasional</li>
+            <li>Menggunakan kurikulum aquatic yang telah teruji</li>
+
         </div>
 
         <!-- The Popup -->
@@ -45,11 +45,11 @@
             // Get the <span> element that closes the popup
             var span = document.getElementsByClassName("close")[0];
             // When the page is loaded, open the popup
-            window.onload = function() {
+            window.onload = function () {
                 popup.style.display = "block";
             }
             // When the user clicks anywhere outside of the popup, close it
-            window.onclick = function(event) {
+            window.onclick = function (event) {
                 if (event.target === popup) {
                     popup.style.display = "none"; // Hide the popup
                 }
@@ -91,10 +91,10 @@
                     <p>Membership</p>
                     <p>Kelas</p>
                     <p>Personal Training</p>
-                    <p>Unduh Aplikasi</p>
+                    <!-- <p>Unduh Aplikasi</p> -->
                 </div>
             </div>
-    
+
             <div class="category-foot" id="jump-with-us">
                 <div class="category-header">
                     <div class="category-icon">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="category-container">
             <div class="category-foot" id="kemitraan">
                 <div class="category-header">
@@ -121,7 +121,7 @@
                 <div class="category-info">
                     <p>Kolaborasi Brand / Company</p>
                     <p>Korporasi Membership</p>
-                    <p>Self Training</p>
+                    <p>Pengen Buka Kolam Renang?</p>
                 </div>
             </div>
             <div class="category-foot" id="tentang-kami">
@@ -132,10 +132,10 @@
                     <h2>TENTANG KAMI</h2>
                 </div>
                 <div class="category-info">
-                    <p>Tentang Kami</p>
+                    <p>Stadium Profile</p>
                     <p>FAQ</p>
                     <p>Syarat dan Ketentuan</p>
-                    <p>Unduh Aplikasi</p>
+                    <!-- <p>Unduh Aplikasi</p> -->
                 </div>
             </div>
         </div>
@@ -149,16 +149,17 @@
                 </div>
                 <div class="contact-info">
                     <p>Assalaam Olympic Pool Stadium</p>
-                    <p>Kawasan Assalaam Barat</p>
+                    <p>Kompleks Barat Pondok Pesantren Modern Islam Assalaam</p>
                     <p>Jalan Garuda Mas, Mendungan, Pabelan</p>
-                    <p>Kecamatan Kartasura, Kabupaten Sukoharjo</p>
-                    <p> 57102, Jawa Tengah</p>
+                    <p>Kecamatan Kartasura, Kabupaten Sukoharjo, 57102</p>
+                    <p>Jawa Tengah</p>
                     <h3>WhatsApp:</h3>
-                    <p>0889 - 0287 - 2779</p>
+                    <p>0889 - 0287 - 2779 (Admin)</p>
                     <h3>Email:</h3>
                     <p>assalaamolympicpool@gmail.com</p>
                     <h3>Instagram:</h3>
-                    <p><a href="https://www.instagram.com/assalaamolympicpool/" style="color: white;">@assalaamolympicpool</a></p>
+                    <p><a href="https://www.instagram.com/assalaamolympicpool/"
+                            style="color: white;">@assalaamolympicpool</a></p>
                 </div>
                 <div class="find-us">
                     <div class="category-foot">
@@ -168,17 +169,20 @@
                             </div>
                             <h2>FIND US</h2>
                         </div>
-                        <p><i class="fas fa-envelope"></i><a href="mailto:assalaamolympicpool@gmail.com" target="_blank" rel="noopener noreferrer">assalaamolympicpool@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i><a href="mailto:assalaamolympicpool@gmail.com" target="_blank"
+                                rel="noopener noreferrer">assalaamolympicpool@gmail.com</p>
                         <p><i class="fab fa-facebook"></i> -</p>
-                        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/assalaamolympicpool/" target="_blank" rel="noopener noreferrer">@assalaamolympicpool</a></p>
+                        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/assalaamolympicpool/"
+                                target="_blank" rel="noopener noreferrer">@assalaamolympicpool</a></p>
                         <p><i class="fab fa-tiktok"></i> -</p>
                     </div>
                 </div>
     </footer>
     <script>
-        document.querySelector('.header-menu-toggle').addEventListener('click', function() {
+        document.querySelector('.header-menu-toggle').addEventListener('click', function () {
             document.querySelector('.header-menu').classList.toggle('active');
         });
     </script>
 </body>
+
 </html>
