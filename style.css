@@ -1,5 +1,5 @@
 /* index.html */
-@import url("https://fonts.googleapis.com/css2?family=Bronzier&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 .small-text {
   font-size: 12px; /* Custom font size */
@@ -9,7 +9,7 @@
   --bgColor: #223344;
   --bgColor2: #090a0f;
   --accentColor: #143021;
-  --font: "Bronzier", sans-serif;
+  --font: "Inter", sans-serif;
   --delay: 0.3s;
 }
 
@@ -96,12 +96,14 @@ body {
   font-size: 50px;
   color: #ffe500;
   text-transform: uppercase;
-  transition: transform 0.3s ease, color 0.3s ease; /* Hapus box-shadow dari transition */
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Tambahkan text-shadow ke transition */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan teks default */
 }
 
 .text-lift:hover {
-  transform: translateY(-15px); /* Hanya teks yang terangkat */
+  transform: translateY(-15px); /* Teks terangkat */
   color: #ffffff; /* Warna teks berubah */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Tambahkan efek bayangan teks pada hover */
 }
 
 .main-container {
@@ -131,7 +133,8 @@ body {
   justify-content: left;
   padding: 5px 5px;
   margin: 10px auto; /* Adjust margin as needed */
-  background-color: transparent; /* Button background color */
+  background-color: rgb(255, 255, 255);
+  opacity: 60%; /* Default button background opacity */
   color: black;
   border-radius: 50px;
   font-family: var(--font);
@@ -139,7 +142,7 @@ body {
   font-weight: bolder;
   cursor: pointer;
   text-decoration: none;
-  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
+  transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99), opacity 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99); /* Added transition for opacity */
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   width: 300px; /* Button width */
   max-width: 600px;
@@ -167,7 +170,8 @@ body {
 /* Hover effects for buttons */
 .button:hover {
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
-  background-color: #ffffff; /* Darker background on hover */
+  background-color: white; /* Darker background on hover */
+  opacity: 80%; /* Change opacity to 80% on hover */
 }
 
 /* Shadow effect for all buttons using ::before */
@@ -184,13 +188,9 @@ body {
   transform: translate(5px, 5px);
 }
 
-/* Hover effects for buttons */
-.button:hover {
-  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
-}
-
 .button:active {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 /* Icon styles */
