@@ -42,7 +42,7 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: -1; /* Ensure the video is behind other content */
-  background: rgba(0, 0, 255, 0.5); /* Warna biru dengan transparansi */
+  background: transparent; /* Warna biru dengan transparansi */
   backdrop-filter: blur(10px); /* Efek blur */
   pointer-events: none; /* Agar elemen ini tidak mengganggu interaksi dengan elemen di bawahnya */
 }
