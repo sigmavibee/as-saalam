@@ -128,9 +128,12 @@ body {
 }
 
 .readable-paragraph {
+  padding-top: 55px;
+  font-weight: bold;
   line-height: 1.6; /* Adjust this value as needed */
   margin-bottom: 15px; /* Optional: Add space below the paragraph */
   text-align: justify;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
 }
 
 .main {

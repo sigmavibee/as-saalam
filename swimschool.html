@@ -12,29 +12,42 @@
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay muted loop id="background-video">
-            <source src="assets/videos/Assalaam Linktree Compress.mp4" type="video/mp4">
-            <source src="assets/videos/Assalaam Linktree Compress mov.mov" type="video/mov">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <div class="container">
-        <div class="header">
-            <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
-
+    <header class="header">
+        <div class="container">
+            <div class="cover-background">
+                <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
+                <h1>LET'S GET WET!</h1>
+                <div class="features">
+                    <p class="readable-paragraph">
+                        Ingin sang buah hati pandai berenang? Atau ingin fokus pada pelatihan diri menjadi atlet renang?
+                        Assalaam Olympic Pool Stadium menyediakan layanan Assalaam Swim School yang berisi program
+                        kursus renang
+                        dengan kurikulum Akuatik serta didampingi oleh coach tersertifikasi. Yuk segera daftarkan dirimu
+                        di
+                        Assalaam Swim School dan tingkatkan kemampuanmu.
+                    </p>
+                </div>
+            </div>
         </div>
-        <h1>Let's GET WET</h1>
-        <div class="features">
-            <p class="readable-paragraph">
-                Ingin sang buah hati pandai berenang? Atau ingin fokus pada pelatihan diri menjadi atlet renang?
-                Assalaam Olympic Pool Stadium menyediakan layanan Assalaam Swim School yang berisi program kursus renang
-                dengan kurikulum Akuatik serta didampingi oleh coach tersertifikasi. Yuk segera daftarkan dirimu di
-                Assalaam Swim School dan tingkatkan kemampuanmu.
-            </p>
-        </div>
-
+    </header>
+    <script>
+        // Get the popup
+        var popup = document.getElementById("popup");
+        // When the page is loaded, open the popup
+        window.onload = function () {
+            popup.style.display = "block";
+        }
+        // When the user clicks anywhere outside of the popup, close it
+        document.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                popup.style.display = "none"; // Hide the popup
+            }
+        });
+        document.querySelector('.close-popup').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
+    <main class="main">
         <div class="form-container">
             <form>
                 <label for="name">Nama</label>
@@ -46,81 +59,21 @@
                 <label for="email">Email</label>
                 <input placeholder="Email Anda" type="email" id="email" />
                 <div class="checkbox-group">
-                    <input type="checkbox" id="newsletter" name="newsletter" />
-                    <label for="newsletter" class="checkbox-label">Berlangganan Newsletter</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <p for="newsletter" class="checkbox-label">Berlangganan Newsletter</p>
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy" />
-                    <label for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data
-                        privasi</label>
+                    <input type="checkbox" id="privacy" name="privacy">
+                    <p for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data
+                        privasi</p>
                 </div>
             </form>
             <button class="btn-submit">DAFTAR</button>
         </div>
-    </div>
+        </div>
+    </main>
     <footer>
-        <div class="category-container">
-            <div class="category-foot">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <img alt="Icon Get Wet" src="assets/images/getwet.png" width="48" />
-                    </div>
-                    <h2>GET WET!</h2>
-                </div>
-                <div class="category-info">
-                    <p>Membership</p>
-                    <p>Kelas</p>
-                    <p>Personal Training</p>
-                    <p>Unduh Aplikasi</p>
-                </div>
-            </div>
 
-            <div class="category-foot">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <img alt="Icon Get Wet" src="assets/images/getwet.png" width="48" />
-                    </div>
-                    <h2>JUMP WITH US!</h2>
-                </div>
-                <div class="category-info">
-                    <p>Jadwal</p>
-                    <p>Lokasi</p>
-                    <p>Fasilitas</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bagian Kemitraan -->
-        <div class="category-container">
-            <div class="category-foot">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <img alt="Icon Get Wet" src="assets/images/kemitraan.png" width="48" />
-                    </div>
-                    <h2>KEMITRAAN</h2>
-                </div>
-                <div class="category-info">
-                    <p>Kolaborasi Brand / Company</p>
-                    <p>Korporasi Membership</p>
-                    <p>Self Training</p>
-                </div>
-            </div>
-
-            <div class="category-foot">
-                <div class="category-header">
-                    <div class="category-icon">
-                        <img alt="Icon Get Wet" src="assets/images/jumpwithus.png" width="48" />
-                    </div>
-                    <h2>TENTANG KAMI</h2>
-                </div>
-                <div class="category-info">
-                    <p>Tentang Kami</p>
-                    <p>FAQ</p>
-                    <p>Syarat dan Ketentuan</p>
-                    <p>Unduh Aplikasi</p>
-                </div>
-            </div>
-        </div>
         <div class="category-container">
             <div class="category-foot" id="get-wet">
                 <div class="category-header">
