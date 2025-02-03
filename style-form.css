@@ -87,20 +87,17 @@ body {
 
 .header-icon {
   font-size: 24px;
-  /* Adjust size */
   cursor: pointer;
-  /* Pointer cursor on hover */
   margin-left: 20px;
-  /* Space between icon and logo */
 }
 
 .features {
+  display: flexbox;
+  align-items: center;
+  text-align: left;
   margin: 20px 0;
   color: #121212;
   background-color: transparent;
-  margin-bottom: 25px;
-  border-radius: 24px;
-  padding: 5px;
 }
 
 .features-swim {
@@ -112,12 +109,14 @@ body {
   padding: 5px;
 }
 
-.features p {
+.features h1 {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  margin: 5px 0;
-  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-left: 40px;
 }
 
 .features li {
@@ -166,20 +165,30 @@ body {
   transform: translateY(-200px); /* Move 50px up */
 }
 
-.form-container label {
-  font-weight: bold;
-  font-size: 16px;
+.form-title h2 {
+  color: black;
   padding-left: 10px;
-}
-
-.form-container p {
-  padding-left: 10px;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .form-container h2 {
   color: black;
-  font-size: 32px;
+  padding-left: 10px;
+  font-size: 20px;
   margin-bottom: 10px;
+}
+
+.form-container label {
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.form-container p {
+  padding-left: 10px;
 }
 
 .form-container select {
@@ -198,6 +207,16 @@ body {
   margin: 10px 0;
   border: none;
   border-radius: 24px;
+}
+
+.checkbox-area {
+  margin-bottom: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
 }
 
 .checkbox-group {
@@ -498,9 +517,17 @@ footer {
     height: 500px;
   }
 
+  .features h1 {
+    padding-left: 27.5px;
+    font-size: 12px;
+  }
+
   .features li {
-    text-align: justify;
+    display: flexbox;
+    align-items: center;
+    text-align: left;
     font-size: 12px; /* Adjust the indentation */
+    padding-left: 10px;
   }
 
   h1 {
@@ -513,8 +540,16 @@ footer {
     transform: translateY(-200px);
   }
 
+  .form-title h2 {
+    font-size: 12px;
+  }
+
+  .form-container h2 {
+    font-size: 12px;
+  }
+
   .form-container label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     padding-left: 10px;
     /* Sesuaikan ukuran font untuk mobile */
@@ -561,6 +596,21 @@ footer {
     font-size: 12px;
   }
 
+  .checkbox-area {
+    margin-bottom: 10px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+
   .category-container {
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -580,6 +630,138 @@ footer {
 
   #tentang-kami {
     order: 4; /* Fourth item */
+  }
+
+  .category-info p {
+    margin: 20px 20px 20px 40px;
+    /* Jarak antara setiap kategori */
+    color: white;
+    /* Ubah warna teks jika perlu */
+    font-size: 12px;
+    /* Sesuaikan ukuran font jika perlu */
+  }
+
+  .contact-info p,
+  .operational-hours p,
+  .government-info p,
+  .find-us p {
+    margin-left: 40px;
+    margin-top: 0;
+    /* Menghapus jarak atas p */
+    margin-bottom: 5px;
+    /* Mengurangi jarak bawah p */
+  }
+
+  .contact-info h3 {
+    margin-left: 40px;
+    margin-bottom: 5px;
+  }
+
+  .map {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header h1 {
+    font-size: 24px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    width: 95%;
+    height: auto;
+  }
+
+  .features h1 {
+    padding-left: 25.5px;
+    font-size: 11px;
+  }
+
+  .features li {
+    text-align: justify;
+    font-size: 10px; /* Adjust the indentation */
+  }
+
+  h1 {
+    font-size: 24px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .form-container {
+    padding: 10px;
+    transform: translateY(-100px);
+  }
+
+  .form-container h2 {
+    font-size: 16px;
+  }
+
+  .form-container label {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 5px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .checkbox-area {
+    margin-bottom: 10px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .popup-content {
+    width: 95%;
+    /* Set popup content width to 95% of screen width */
+    max-width: 300px;
+    /* Set max width */
+    margin: auto;
+    /* Center the popup */
+    padding: 5px;
+    /* Add padding */
+    background-color: #143021;
+    /* Background color */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
+  }
+
+  .popup img {
+    width: 280px;
+    /* Set image width to 280px */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  .footer {
+    padding-top: 30px;
+  }
+
+  .category-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
   }
 
   .category-info p {
