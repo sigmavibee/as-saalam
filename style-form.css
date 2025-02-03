@@ -103,6 +103,15 @@ body {
   padding: 5px;
 }
 
+.features-swim {
+  margin: 20px 0;
+  color: #fdfdfd;
+  background-color: transparent;
+  margin-bottom: 25px;
+  border-radius: 24px;
+  padding: 5px;
+}
+
 .features p {
   display: flex;
   align-items: center;
@@ -114,12 +123,12 @@ body {
 .features li {
   list-style-type: disc;
   padding-left: 20px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: justify;
+  text-align: left;
 }
 
 .features i {
@@ -128,12 +137,13 @@ body {
 }
 
 .readable-paragraph {
-  padding-top: 55px;
   font-weight: bold;
+  font-size: 16px;
   line-height: 1.6; /* Adjust this value as needed */
   margin-bottom: 15px; /* Optional: Add space below the paragraph */
   text-align: justify;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+  text-shadow: 4px 4px 8px rgb(20, 19, 19); /* Add shadow to the text */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), inherit;
 }
 
 .main {
@@ -243,7 +253,7 @@ h3 {
   /* Menggunakan flexbox untuk menempatkan item dalam satu baris */
   justify-content: space-between;
   /* Ruang antara item */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   /* Jarak bawah */
 }
 
@@ -267,19 +277,17 @@ h3 {
 }
 
 .category-info {
-  margin-top: 10px;
-  /* Pastikan tidak ada margin di atas */
-  padding: 0;
+  margin-left: 40px;
+  padding: 0px;
   /* Pastikan tidak ada padding */
 }
 
 .category-info p {
-  margin: 20px 20px 20px 40px;
-  /* Jarak antara setiap kategori */
+  margin: 5px;
+  margin-bottom: 20px;
   color: white;
-  /* Ubah warna teks jika perlu */
+
   font-size: 18px;
-  /* Sesuaikan ukuran font jika perlu */
 }
 
 .contact-info,
@@ -308,7 +316,7 @@ h3 {
 .category-header {
   display: flex;
   align-items: center;
-  /* Vertically center the items */
+  gap: 5px;
 }
 
 .category-icon {
@@ -423,6 +431,27 @@ h3 {
   /* Menghilangkan underline */
 }
 
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 /* Footer Styles */
 footer {
   background-color: #143021;
@@ -470,7 +499,6 @@ footer {
   }
 
   .features li {
-    text-indent: -20px;
     text-align: justify;
     font-size: 12px; /* Adjust the indentation */
   }
@@ -482,7 +510,7 @@ footer {
 
   .form-container {
     padding: 15px;
-    /* Sesuaikan padding untuk mobile */
+    transform: translateY(-200px);
   }
 
   .form-container label {

@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As Salaam</title>
-    <!-- Favicon -->
+    <title>Free Trial</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <!-- Core theme CSS -->
     <link rel="stylesheet" href="style-form.css">
 </head>
 
 <body>
-
     <header class="header">
         <div class="container">
             <div class="cover-background">
@@ -28,33 +25,27 @@
             </div>
         </div>
     </header>
-    <!-- The Popup -->
-    <div id="popup" class="popup">
+     <!-- The Popup -->
+     <div id="popup" class="popup">
         <div class="popup-content">
-            <img src="assets/images/freetrial.png" alt="Popup Image" width="400px">
+            <!-- Navigation arrows -->
+            <button class="close-popup">&times;</button>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!-- Slideshow images -->
+            <?php include 'images.php'; ?>
+
+            <!-- Info button -->
             <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>
         </div>
     </div>
-    <script>
-        // Get the popup
-        var popup = document.getElementById("popup");
-        // When the page is loaded, open the popup
-        window.onload = function () {
-            popup.style.display = "block";
-        }
-        // When the user clicks anywhere outside of the popup, close it
-        document.addEventListener('click', function (event) {
-            if (event.target === popup) {
-                popup.style.display = "none"; // Hide the popup
-            }
-        });
-        document.querySelector('.close-popup').addEventListener('click', function () {
-            document.getElementById('popup').style.display = 'none';
-        });
-    </script>
+    
+    <script async src="popup.js"></script>
+
     <main class="main">
         <div class="form-container">
-            <h2>Isi Data Diri untuk Daftar</h2>
+            <h2>Isi Data Diri untuk Daftar Free Trial</h2>
             <form>
                 <label for="name">Nama</label>
                 <input placeholder="Nama Anda" type="text" id="name" />
@@ -148,22 +139,24 @@
                 </div>
                 <div class="contact-info">
                     <p>Assalaam Olympic Pool Stadium</p>
-                    <p>Kawasan Assalaam Barat</p>
+                    <p>Kompleks Barat Pondok Pesantren Modern Islam Assalaam</p>
                     <p>Jalan Garuda Mas, Mendungan, Pabelan</p>
-                    <p>Kecamatan Kartasura, Kabupaten Sukoharjo</p>
-                    <p> 57102, Jawa Tengah</p>
+                    <p>Kecamatan Kartasura, Kabupaten Sukoharjo, 57102</p>
+                    <p>Jawa Tengah</p>
                     <div class="map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.7992424215381!2d110.76885749587885!3d-7.553489342568874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a153e97b63dd1%3A0xb40c0455dce2c638!2sAssalaam%20Olympic%20Pool%20Stadium!5e0!3m2!1sid!2sid!4v1737697423609!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
+
                     <h3>WhatsApp:</h3>
-                    <p>0889 - 0287 - 2779</p>
+                    <p>0889 - 0287 - 2779 (Admin)</p>
                     <h3>Email:</h3>
                     <p>assalaamolympicpool@gmail.com</p>
                     <h3>Instagram:</h3>
-                    <p><a href="https://www.instagram.com/assalaamolympicpool"
+
+                    <p><a href="https://www.instagram.com/assalaamolympicpool/"
                             style="color: white;">@assalaamolympicpool</a></p>
                 </div>
                 <div class="find-us">

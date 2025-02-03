@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swim School</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Salaam</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="stylesheet" href="style-form.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="style-form.css">
 </head>
 
 <body>
@@ -18,44 +17,40 @@
                 <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
                 <h1>LET'S GET WET!</h1>
                 <div class="features">
-                    <p class="readable-paragraph">
-                        Ingin sang buah hati pandai berenang? Atau ingin fokus pada pelatihan diri menjadi atlet renang?
-                        Assalaam Olympic Pool Stadium menyediakan layanan Assalaam Swim School yang berisi program
-                        kursus renang
-                        dengan kurikulum Akuatik serta didampingi oleh coach tersertifikasi. Yuk segera daftarkan dirimu
-                        di
-                        Assalaam Swim School dan tingkatkan kemampuanmu.
-                    </p>
+                    <li>Kursus renang di kolam dengan standar Olympic</li>
+                    <li>Pelatih berpengalaman dan bersertifikasi internasional</li>
+                    <li>Menggunakan kurikulum aquatic yang telah teruji</li>
                 </div>
             </div>
         </div>
     </header>
-    <script>
-        // Get the popup
-        var popup = document.getElementById("popup");
-        // When the page is loaded, open the popup
-        window.onload = function () {
-            popup.style.display = "block";
-        }
-        // When the user clicks anywhere outside of the popup, close it
-        document.addEventListener('click', function (event) {
-            if (event.target === popup) {
-                popup.style.display = "none"; // Hide the popup
-            }
-        });
-        document.querySelector('.close-popup').addEventListener('click', function () {
-            document.getElementById('popup').style.display = 'none';
-        });
-    </script>
+
+    <!-- The Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <!-- Navigation arrows -->
+            <button class="close-popup">&times;</button>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!-- Slideshow images -->
+            <?php include 'images.php'; ?>
+
+            <!-- Info button -->
+            <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>
+        </div>
+    </div>
+
+    <script async src="popup.js"></script>
+
     <main class="main">
         <div class="form-container">
+            <h2>Isi Data Diri untuk Daftar Membership</h2>
             <form>
                 <label for="name">Nama</label>
                 <input placeholder="Nama Anda" type="text" id="name" />
                 <label for="phone">No. Handphone</label>
                 <input placeholder="No. Handphone" type="text" id="phone" />
-                <label for="confirm-phone">Konfirmasi No. Handphone</label>
-                <input placeholder="Konfirmasi No. Handphone" type="text" id="confirm-phone" />
                 <label for="email">Email</label>
                 <input placeholder="Email Anda" type="email" id="email" />
                 <div class="checkbox-group">
@@ -63,17 +58,15 @@
                     <p for="newsletter" class="checkbox-label">Berlangganan Newsletter</p>
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy">
-                    <p for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data
-                        privasi</p>
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <p for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data privasi</p>
                 </div>
+                <button class="btn-submit" type="submit">DAFTAR</button>
             </form>
-            <button class="btn-submit">DAFTAR</button>
-        </div>
         </div>
     </main>
-    <footer>
 
+    <footer>
         <div class="category-container">
             <div class="category-foot" id="get-wet">
                 <div class="category-header">
@@ -147,13 +140,19 @@
                     <p>Kawasan Assalaam Barat</p>
                     <p>Jalan Garuda Mas, Mendungan, Pabelan</p>
                     <p>Kecamatan Kartasura, Kabupaten Sukoharjo</p>
-                    <p>57102, Jawa Tengah</p>
+                    <p> 57102, Jawa Tengah</p>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.7992424215381!2d110.76885749587885!3d-7.553489342568874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a153e97b63dd1%3A0xb40c0455dce2c638!2sAssalaam%20Olympic%20Pool%20Stadium!5e0!3m2!1sid!2sid!4v1737697423609!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                     <h3>WhatsApp:</h3>
                     <p>0889 - 0287 - 2779</p>
                     <h3>Email:</h3>
                     <p>assalaamolympicpool@gmail.com</p>
                     <h3>Instagram:</h3>
-                    <p><a href="https://www.instagram.com/assalaamolympicpool/"
+                    <p><a href="https://www.instagram.com/assalaamolympicpool"
                             style="color: white;">@assalaamolympicpool</a></p>
                 </div>
                 <div class="find-us">
@@ -172,12 +171,6 @@
                         <p><i class="fab fa-tiktok"></i> -</p>
                     </div>
                 </div>
-    </footer>
-    <script>
-        document.querySelector(".header-menu-toggle").addEventListener("click", function () {
-            document.querySelector(".header-menu").classList.toggle("active");
-        });
-    </script>
-</body>
+    </footer></body>
 
 </html>
