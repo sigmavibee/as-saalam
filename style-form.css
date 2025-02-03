@@ -690,11 +690,11 @@ footer {
 
   .form-container {
     padding: 10px;
-    transform: translateY(-100px);
+    transform: translateY(-75px);
   }
 
   .form-container h2 {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .form-container label {
