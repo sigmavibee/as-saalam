@@ -1,7 +1,3 @@
-<?php
-header("Content-Type: text/html; charset=UTF-8");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +34,18 @@ header("Content-Type: text/html; charset=UTF-8");
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
             <!-- Slideshow images -->
-            <?php include 'images.php'; ?>
+            <div>
+                <div class="popup-slide">
+                    <img src="assets/images/membership.png" alt="Membership Image" width="400px">
+                </div>
+                <div class="popup-slide">
+                    <img src="assets/images/membership/" alt="Membership Image" width="400px">
+                </div>
+                <div class="popup-slide">
+                    <img src="assets/images/membership/" alt="Membership Image" width="400px">
+                </div>
+            </div>
+        
 
             <!-- Info button -->
             <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>

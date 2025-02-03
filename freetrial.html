@@ -1,7 +1,3 @@
-<?php
-header("Content-Type: text/html; charset=UTF-8");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +25,8 @@ header("Content-Type: text/html; charset=UTF-8");
             </div>
         </div>
     </header>
-     <!-- The Popup -->
-     <div id="popup" class="popup">
+    <!-- The Popup -->
+    <div id="popup" class="popup">
         <div class="popup-content">
             <!-- Navigation arrows -->
             <button class="close-popup">&times;</button>
@@ -38,13 +34,20 @@ header("Content-Type: text/html; charset=UTF-8");
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
             <!-- Slideshow images -->
-            <?php include 'images.php'; ?>
+            <div>
+                <div class="popup-slide">
+                    <img src="assets/images/freetrial/freetrial.png" alt="freetrial Image" width="400px">
+                </div>
+                <div class="popup-slide">
+                    <img src="assets/images/freetrial/promotion.png" alt="freetrial Image" width="400px">
+                </div>
+            </div>
 
             <!-- Info button -->
             <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>
         </div>
     </div>
-    
+
     <script async src="popup.js"></script>
 
     <main class="main">
