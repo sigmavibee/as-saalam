@@ -17,9 +17,9 @@
                 <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
                 <h1>LET'S GET WET!</h1>
                 <div class="features">
-                    <li>Kursus renang di kolam dengan standar Olympic</li>
-                    <li>Pelatih berpengalaman dan bersertifikasi internasional</li>
-                    <li>Menggunakan kurikulum aquatic yang telah teruji</li>
+                    <li>Sering berenang tapi masih bayar harga reguler?</li>
+                    <li>Pilih paket membership yang paling cocok untuk Anda!</li>
+                    <li>Yuk, jadi member biar lebih hemat</li>
                 </div>
             </div>
         </div>
@@ -48,59 +48,7 @@
         </div>
     </div>
 
-    <script>
-        // Get the popup
-        var popup = document.getElementById("popup");
-
-        // Open the popup when the page is loaded
-        window.onload = function () {
-            popup.style.display = "block";
-            slideIndex = 0; // Set slideIndex to 0
-            showSlides(slideIndex); // Show the first slide
-        }
-
-        // Close the popup when clicking outside
-        document.addEventListener('click', function (event) {
-            if (event.target === popup) {
-                popup.style.display = "none";
-            }
-        });
-        document.querySelector('.close-popup').addEventListener('click', function () {
-            document.getElementById('popup').style.display = 'none';
-        });
-
-        // Slideshow functionality
-        var slideIndex = 0;
-        var slides = document.getElementsByClassName("popup-slide");
-
-        function showSlides(index) {
-            // Hide all slides
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            // Show the current slide
-            slides[index].style.display = "block";
-        }
-
-        function changeSlide(n) {
-            slideIndex += n;
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
-            showSlides(slideIndex);
-        }
-
-        // Automatically cycle through slides
-        setInterval(function () {
-            slideIndex++;
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
-            showSlides(slideIndex);
-        }, 10000); // Change image every 10 seconds
-    </script>
+    <script async src="popup.js"></script>
 
     <main class="main">
         <div class="form-container">
@@ -128,7 +76,6 @@
                 </form>
         </div>
     </main>
-
     <footer>
         <div class="category-container">
             <div class="category-foot" id="get-wet">
@@ -141,7 +88,9 @@
                 <div class="category-info">
                     <p>Membership</p>
                     <p>Kelas</p>
-                    <p>Personal Training</p>
+                    <p><a href="personal-training.html" target="_blank" rel="noopener noreferrer"
+                            style="text-decoration: none; color: inherit;">Personal Training</a>
+                    </p>
                 </div>
             </div>
 
@@ -229,11 +178,7 @@
                     </div>
                 </div>
     </footer>
-    <script>
-        document.querySelector('.header-menu-toggle').addEventListener('click', function () {
-            document.querySelector('.header-menu').classList.toggle('active');
-        });
-    </script>
+
 </body>
 
 </html>

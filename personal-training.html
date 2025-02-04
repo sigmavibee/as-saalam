@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swim School</title>
+    <title>Personal Training</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -12,76 +12,37 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header-about">
         <div class="container">
             <div class="cover-background">
                 <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
                 <h1>LET'S GET WET!</h1>
-                <div class="features-swim">
-                    <div class="readable-paragraph">
-                        <p>
-                            Ingin sang buah hati pandai berenang? Atau ingin fokus pada pelatihan diri menjadi atlet
-                            renang?
-                            Assalaam Olympic Pool Stadium menyediakan layanan Assalaam Swim School yang berisi program
-                            kursus renang
-                            dengan kurikulum Akuatik serta didampingi oleh coach tersertifikasi
-                    </div>
-                </div>
             </div>
+        </div>
     </header>
-    <!-- The Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <!-- Navigation arrows -->
-            <button class="close-popup">&times;</button>
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-            <!-- Slideshow images -->
-            <div>
-                <div class="popup-slide">
-                    <img src="assets/images/swimschool/special-private.png" alt="swimschoolImage" width="400px">
-                </div>
-                <div class="popup-slide">
-                    <img src="assets/images/swimschool/special-regular.png" alt="swimschoolImage" width="400px">
-                </div>
-                <div class="popup-slide">
-                    <img src="assets/images/swimschool/walk-in.png" alt="swimschoolImage" width="400px">
+    <main class="main-about">
+        <section class="content-section">
+            <div class="page-content">
+                <img src="assets/images/freetrial-background.png" alt="Sample Image" />
+                <div class="text-content">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2>Setting header height to 50% using flexbox on parent
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
-
-            <!-- Info button -->
-            <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>
-        </div>
-    </div>
-    <script async src="popup.js"></script>
-    <main class="main">
-        <div class="form-container">
-            <div class="form-title">
-                <h2>Yuk, daftar swim school!</h2>
-            </div>
-            <form>
-                <label for="name">Nama</label>
-                <input placeholder="Nama Anda" type="text" id="name" />
-                <label for="phone">No. Handphone</label>
-                <input placeholder="No. Handphone" type="text" id="phone" />
-                <label for="email">Email</label>
-                <input placeholder="Email Anda" type="email" id="email" />
-                <div class="checkbox-group">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <p for="newsletter" class="checkbox-label">Berlangganan Newsletter</p>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <p for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data privasi
-                    </p>
-                </div>
-                <button class="btn-submit" type="submit">DAFTAR</button>
-            </form>
-        </div>
+        </section>
     </main>
     <footer>
-
         <div class="category-container">
             <div class="category-foot" id="get-wet">
                 <div class="category-header">
@@ -95,7 +56,6 @@
                     <p>Kelas</p>
                     <p><a href="personal-training.html" target="_blank" rel="noopener noreferrer"
                             style="text-decoration: none; color: inherit;">Personal Training</a>
-                        <!-- <p>Unduh Aplikasi</p> -->
                 </div>
             </div>
 
@@ -139,7 +99,6 @@
                     <p>Stadium Profile</p>
                     <p>FAQ</p>
                     <p>Syarat dan Ketentuan</p>
-                    <!-- <p>Unduh Aplikasi</p> -->
                 </div>
             </div>
         </div>
@@ -184,11 +143,4 @@
                     </div>
                 </div>
     </footer>
-    <script>
-        document.querySelector(".header-menu-toggle").addEventListener("click", function () {
-            document.querySelector(".header-menu").classList.toggle("active");
-        });
-    </script>
 </body>
-
-</html>
