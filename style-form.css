@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* font styles */
+h1 {
+  color: yellow;
+  font-size: 48px;
+}
+
+h2 {
+  margin-left: 1px;
+  color: #ffc107;
+  font-size: 24px;
+}
+
+h3 {
+  margin-left: 0px;
+  color: white;
+  font-size: 16px;
+}
+
+/* root form */
 body {
   margin: 0;
   padding: 0;
@@ -27,15 +46,6 @@ body {
   position: relative;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 1) 100%), url("assets/images/freetrial-background.png") no-repeat center center/cover;
   height: 25%;
-}
-.header-about {
-  display: flex;
-  color: white;
-  justify-content: space-between;
-  max-height: 300px;
-  align-items: center;
-  position: relative;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 75%, rgba(255, 255, 255, 1) 100%), url("assets/images/freetrial-background.png") no-repeat center center/cover;
 }
 
 .header::after {
@@ -106,6 +116,12 @@ body {
   aspect-ratio: 124 / 106;
 }
 
+.main {
+  padding: 3rem 0;
+  background-color: white;
+  height: 250px;
+}
+
 .features {
   display: flexbox;
   align-items: center;
@@ -158,117 +174,6 @@ body {
   text-align: justify;
   text-shadow: 4px 4px 8px rgb(20, 19, 19); /* Add shadow to the text */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), inherit;
-}
-
-.main {
-  padding: 3rem 0;
-  background-color: white;
-  height: 250px;
-}
-
-.main-about {
-  background-color: white;
-  background: linear-gradient(to bottom, #ffffff, #455b4678);
-}
-
-.content-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px;
-}
-
-.content-section img {
-  display: block;
-  margin: 0 auto;
-  max-width: 500px;
-  max-height: 500px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.content-section .text-content {
-  flex: 1;
-  padding: 20px;
-  background-color: white;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.content-section .text-content h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.content-section .text-content p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  text-align: justify;
-}
-.content-section .text-content li {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.list {
-  display: flex; /* Mengatur tata letak flex */
-  flex-direction: row; /* Mengatur arah flex menjadi baris */
-  align-items: flex-start; /* Mengatur item ke atas */
-  justify-content: center; /* Mengatur item ke tengah secara horizontal */
-  margin: 0 auto;
-  padding: 20px;
-  flex-wrap: nowrap; /* Menghindari pembungkusan, semua item dalam satu baris */
-  overflow-x: auto; /* Mengizinkan scroll horizontal jika konten melebihi lebar */
-}
-
-.list-item {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 15px; /* Margin di sekitar item */
-  width: 300px; /* Atur lebar item */
-  text-align: center;
-  overflow: hidden;
-  display: flex; /* Gunakan flexbox untuk tata letak */
-  flex-direction: column; /* Atur arah flex menjadi kolom */
-  min-height: 350px; /* Atur tinggi minimum untuk card */
-}
-
-.container-card {
-  padding: 20px;
-  width: 100%; /* Ubah menjadi 100% agar mengisi lebar card */
-}
-
-.image-card {
-  width: 90%; /* Memastikan gambar mengisi lebar card */
-  height: 90%; /* Atur tinggi gambar agar proporsional */
-  object-fit: cover; /* Memastikan gambar tidak terdistorsi dan mengisi area */
-}
-
-.text-card {
-  margin: 10px 0;
-  text-align: justify;
-}
-
-.text-card li {
-  padding-right: 10px;
-  margin: 10px 0;
-  text-align: justify;
-}
-
-.text-title-card {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333; /* Warna teks judul */
-}
-
-.text-description-card {
-  font-style: italic;
-  font-size: 14px;
-  color: #777; /* Warna teks deskripsi */
 }
 
 .form-container {
@@ -370,22 +275,188 @@ body {
   /* Width of the button */
 }
 
-h1 {
-  color: yellow;
-  font-size: 48px;
-}
+/* about-page */
 
-h2 {
-  margin-left: 1px;
-  color: #ffc107;
-  font-size: 24px;
-}
-
-h3 {
-  margin-left: 0px;
+.header-about {
+  display: flex;
   color: white;
-  font-size: 16px;
+  justify-content: space-between;
+  max-height: 300px;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 75%, rgba(255, 255, 255, 1) 100%), url("assets/images/freetrial-background.png") no-repeat center center/cover;
 }
+
+.main-about {
+  background-color: white;
+  background: linear-gradient(to bottom, #ffffff, #455b4678);
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-about h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #143021;
+  text-align: center;
+}
+
+.content-section img {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.content-section .text-content {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-section .text-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content-section .text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.content-section .text-content li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* card */
+.list {
+  display: flex; /* Mengatur tata letak flex */
+  flex-direction: wrap; /* Mengatur arah flex menjadi baris */
+  align-items: flex-start; /* Mengatur item ke atas */
+  justify-content: center; /* Mengatur item ke tengah secara horizontal */
+  margin: 0 auto;
+  align-items: stretch;
+  padding: 20px;
+  flex-wrap: nowrap; /* Menghindari pembungkusan, semua item dalam satu baris */
+  overflow-x: auto; /* Mengizinkan scroll horizontal jika konten melebihi lebar */
+}
+
+.list-item {
+  flex: 1 1 calc(33.33% - 30px);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 15px; /* Margin di sekitar item */
+  width: 300px; /* Atur lebar item */
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex; /* Gunakan flexbox untuk tata letak */
+  flex-direction: column; /* Atur arah flex menjadi kolom */
+  min-height: 350px; /* Atur tinggi minimum untuk card */
+}
+
+.container-card {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%; /* Ubah menjadi 100% agar mengisi lebar card */
+}
+
+.container-card {
+  align-items: center;
+}
+
+/* @media (max-width: 768px) {
+  .list-item {
+    flex: 1 1 calc(50% - 30px); /* Adjust width to 1/2 minus margin for smaller screens */
+/* }
+} */
+
+/* @media (max-width: 480px) {
+  .list-item {
+    flex: 1 1 100%; /* Full width for very small screens */
+/* }
+} */
+*/ */ .image-card {
+  width: max-content; /* Memastikan gambar mengisi lebar card */
+  height: max-content; /* Atur tinggi gambar agar proporsional */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi dan mengisi area */
+}
+
+.text-card {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.text-card li {
+  padding-right: 10px;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.text-title-card {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Warna teks judul */
+}
+
+.text-description-card {
+  font-style: italic;
+  font-size: 14px;
+  color: #777; /* Warna teks deskripsi */
+}
+
+/* terms */
+.terms-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.terms-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.terms-content h3 {
+  margin-top: 15px;
+  color: #007bff;
+}
+
+.terms-content p {
+  font-size: 14px;
+  color: #555;
+  text-align: justify;
+}
+
+@media (max-width: 480px) {
+  .terms-container {
+    width: 90%;
+  }
+}
+
+/* footer */
 
 .category-container {
   display: flex;
@@ -416,8 +487,7 @@ h3 {
 }
 
 .category-info {
-  margin-left: 40px;
-  padding: 0px;
+  padding-left: 40px;
   /* Pastikan tidak ada padding */
 }
 
@@ -425,7 +495,6 @@ h3 {
   margin: 5px;
   margin-bottom: 20px;
   color: white;
-
   font-size: 18px;
 }
 
@@ -436,15 +505,18 @@ h3 {
   margin-bottom: 40px;
 }
 
-.contact-info p,
+.contact-info p {
+  padding-left: 80px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
 .operational-hours p,
 .government-info p,
 .find-us p {
   margin-left: 40px;
   margin-top: 0;
-  /* Menghapus jarak atas p */
+
   margin-bottom: 5px;
-  /* Mengurangi jarak bawah p */
 }
 
 .contact-info h3 {
@@ -614,9 +686,8 @@ footer {
 }
 
 .map {
-  margin-left: 40px;
+  padding-left: 40px;
   border-radius: 10px;
-
   box-sizing: border-box; /* Include border in the element's total width and height */
 }
 .close-popup {
@@ -660,6 +731,74 @@ footer {
   display: inline-block;
   width: 33%;
   height: auto;
+}
+
+.find-us-info {
+  padding-left: 40px;
+}
+
+/* faq */
+.faq-container {
+  max-width: 700px;
+  margin: auto;
+  background: linear-gradient(to bottom, #6dc403e5, #39751e);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.accordion-link::after {
+  content: "\25BC"; /* Unicode for down arrow */
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s;
+  transform: rotateX(180deg); /* Rotate arrow */
+}
+
+.accordion-link.active::after {
+  transform: rotate(180deg); /* Rotate arrow when active */
+  content: "\25B2"; /* Unicode for up arrow */
+}
+
+.accordion-link {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  background: #f9f9f9;
+  transition: background 0.3s;
+}
+
+.accordion-link:hover {
+  background: #e9e9e9;
+}
+
+.accordion-pane {
+  display: none;
+  padding: 15px;
+  background: #f1f1f1;
+}
+.accordion-pane p {
+  text-align: justify;
+}
+
+.accordion-link.active + .accordion-pane {
+  display: block;
 }
 
 /* Media Queries for Responsiveness */
@@ -706,7 +845,7 @@ footer {
   }
 
   .image-card {
-    height: 150px; /* Atur tinggi gambar untuk layar kecil */
+    height: 100%; /* Atur tinggi gambar untuk layar kecil */
   }
 
   .text-title-card {
@@ -816,12 +955,7 @@ footer {
     order: 4; /* Fourth item */
   }
 
-  .category-info {
-    margin-left: 45px;
-  }
-
   .category-info p {
-    margin: 20px 20px 20px 40px;
     /* Jarak antara setiap kategori */
     color: white;
     /* Ubah warna teks jika perlu */
@@ -829,7 +963,10 @@ footer {
     /* Sesuaikan ukuran font jika perlu */
   }
 
-  .contact-info p,
+  .contact-info p {
+    padding-left: 40px;
+  }
+
   .operational-hours p,
   .government-info p,
   .find-us p {
@@ -842,10 +979,6 @@ footer {
   .contact-info h3 {
     margin-left: 40px;
     margin-bottom: 5px;
-  }
-
-  .map {
-    margin-left: 40px;
   }
 
   .close-popup {
@@ -910,7 +1043,7 @@ footer {
     }
 
     .image-card {
-      height: 120px; /* Atur tinggi gambar untuk layar sangat kecil */
+      height: 100%; /* Atur tinggi gambar untuk layar sangat kecil */
     }
 
     .text-title-card {
@@ -1001,12 +1134,7 @@ footer {
       flex-direction: column; /* Stack items vertically */
     }
 
-    .category-info {
-      margin-left: 45px;
-    }
-
     .category-info p {
-      margin: 20px 20px 20px 40px;
       /* Jarak antara setiap kategori */
       color: white;
       /* Ubah warna teks jika perlu */
@@ -1014,7 +1142,10 @@ footer {
       /* Sesuaikan ukuran font jika perlu */
     }
 
-    .contact-info p,
+    .contact-info p {
+      font-weight: bold;
+    }
+
     .operational-hours p,
     .government-info p,
     .find-us p {
