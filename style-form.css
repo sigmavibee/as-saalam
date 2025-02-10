@@ -487,7 +487,7 @@ body {
 }
 
 .category-info {
-  padding-left: 40px;
+  padding-left: 80px;
   /* Pastikan tidak ada padding */
 }
 
@@ -506,6 +506,7 @@ body {
 }
 
 .contact-info p {
+  font-weight: bold;
   padding-left: 80px;
   margin-top: 0;
   margin-bottom: 5px;
@@ -686,10 +687,11 @@ footer {
 }
 
 .map {
-  padding-left: 40px;
+  padding-left: 80px;
   border-radius: 10px;
   box-sizing: border-box; /* Include border in the element's total width and height */
 }
+
 .close-popup {
   position: absolute;
   top: 10px;
@@ -856,6 +858,41 @@ footer {
     font-size: 12px; /* Ukuran font deskripsi lebih kecil */
   }
 
+  /*terms*/
+  .terms-content h3 {
+    color: yellow;
+    font-size: 48px;
+  }
+
+  .terms-content h4 {
+    font-size: 24px;
+    color: #121212;
+    font-weight: bolder;
+  }
+  .terms-content h5 {
+    font-size: 18px;
+    color: #121212;
+    font-weight: bolder;
+  }
+
+  .terms-content h6 {
+    font-size: 16px;
+    color: #121212;
+    font-weight: bolder;
+  }
+
+  .terms-content h7 {
+    font-size: 14px;
+    color: #121212;
+    font-weight: bolder;
+  }
+
+  .terms-content h8 {
+    font-size: 12px;
+    color: #121212;
+    font-weight: bolder;
+  }
+
   /* form */
   .form-container {
     padding: 15px;
@@ -964,6 +1001,7 @@ footer {
   }
 
   .contact-info p {
+    font-weight: bold;
     padding-left: 40px;
   }
 
@@ -979,6 +1017,12 @@ footer {
   .contact-info h3 {
     margin-left: 40px;
     margin-bottom: 5px;
+  }
+
+  .map {
+    padding-left: 40px;
+    border-radius: 10px;
+    box-sizing: border-box; /* Include border in the element's total width and height */
   }
 
   .close-popup {
@@ -1162,7 +1206,9 @@ footer {
     }
 
     .map {
-      margin-left: 40px;
+      padding-left: 40px;
+      border-radius: 10px;
+      box-sizing: border-box; /* Include border in the element's total width and height */
     }
 
     .close-popup {
