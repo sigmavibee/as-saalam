@@ -375,25 +375,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  width: 100%; /* Ubah menjadi 100% agar mengisi lebar card */
-}
-
-.container-card {
+  width: 100%;
   align-items: center;
 }
 
-/* @media (max-width: 768px) {
-  .list-item {
-    flex: 1 1 calc(50% - 30px); /* Adjust width to 1/2 minus margin for smaller screens */
-/* }
-} */
+/*terms*/
 
-/* @media (max-width: 480px) {
-  .list-item {
-    flex: 1 1 100%; /* Full width for very small screens */
-/* }
-} */
-*/ */ .image-card {
+.image-card {
   width: max-content; /* Memastikan gambar mengisi lebar card */
   height: max-content; /* Atur tinggi gambar agar proporsional */
   object-fit: cover; /* Memastikan gambar tidak terdistorsi dan mengisi area */
@@ -440,8 +428,45 @@ body {
 }
 
 .terms-content h3 {
-  margin-top: 15px;
-  color: #007bff;
+  color: black;
+  font-size: 20px;
+}
+
+.terms-content h4 {
+  font-size: 14px;
+  color: #121212;
+  font-weight: bold;
+  padding-left: 15px;
+  text-align: justify;
+  margin: 0;
+}
+.terms-content h5 {
+  font-size: 14px;
+  color: #121212;
+  font-weight: bold;
+  padding-left: 30px;
+  text-align: justify;
+  margin: 0;
+}
+
+.terms-content h6 {
+  font-size: 14px;
+  color: #121212;
+  font-weight: bolder;
+  padding-left: 45px;
+  margin: 0;
+}
+
+.terms-content h7 {
+  font-size: 14px;
+  color: #121212;
+  font-weight: bolder;
+}
+
+.terms-content h8 {
+  font-size: 12px;
+  color: #121212;
+  font-weight: bolder;
 }
 
 .terms-content p {
@@ -803,6 +828,10 @@ footer {
   display: block;
 }
 
+.container-card {
+  padding: 0px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 480px) {
   /* header */
@@ -856,41 +885,6 @@ footer {
 
   .text-description-card {
     font-size: 12px; /* Ukuran font deskripsi lebih kecil */
-  }
-
-  /*terms*/
-  .terms-content h3 {
-    color: yellow;
-    font-size: 48px;
-  }
-
-  .terms-content h4 {
-    font-size: 24px;
-    color: #121212;
-    font-weight: bolder;
-  }
-  .terms-content h5 {
-    font-size: 18px;
-    color: #121212;
-    font-weight: bolder;
-  }
-
-  .terms-content h6 {
-    font-size: 16px;
-    color: #121212;
-    font-weight: bolder;
-  }
-
-  .terms-content h7 {
-    font-size: 14px;
-    color: #121212;
-    font-weight: bolder;
-  }
-
-  .terms-content h8 {
-    font-size: 12px;
-    color: #121212;
-    font-weight: bolder;
   }
 
   /* form */
@@ -1036,6 +1030,16 @@ footer {
     color: white;
     cursor: pointer;
     z-index: 10;
+  }
+
+  .content-section img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .page-content img {
+    width: 100%;
+    max-width: 300px;
   }
 
   @media (max-width: 360px) {
@@ -1222,6 +1226,14 @@ footer {
       color: white;
       cursor: pointer;
       z-index: 10;
+    }
+    .container-card {
+      padding: 0px;
+    }
+
+    .content-section img {
+      max-width: 300px;
+      max-height: 300px;
     }
   }
 }

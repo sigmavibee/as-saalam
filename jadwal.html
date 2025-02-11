@@ -2,78 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Trial</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="style-form.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="style-form.css" />
 </head>
 
 <body>
-    <header class="header">
+    <header class="header-about">
         <div class="container">
-            <div class="cover-background">
-                <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
+            <div class="coverbackground-about">
+                <img alt="As Salaam Logo" src="assets/images/logo.png" />
                 <h1>LET'S GET WET!</h1>
-                <div class="features">
-                    <h1>Ingin belajar renang? Ayo coba gratis sekarang juga</h1>
-                    <li>Kursus renang di kolam dengan standar Olympic</li>
-                    <li>Pelatih berpengalaman dan bersertifikasi internasional</li>
-                    <li>Menggunakan kurikulum aquatic yang telah teruji</li>
-
-                </div>
             </div>
         </div>
     </header>
-    <!-- The Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <!-- Navigation arrows -->
-            <button class="close-popup">&times;</button>
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-            <!-- Slideshow images -->
-            <div>
-                <div class="popup-slide">
-                    <img data-src="assets/images/freetrial/freetrial.png" alt="freetrial Image" width="400px">
-                </div>
-                <div class="popup-slide">
-                    <img data-src="assets/images/freetrial/freetrial-2.png" alt="freetrial Image" width="400px">
+    <main class="main-about">
+        <h1>Jadwal</h1>
+        <section class="content-section">
+            <div class="container-card">
+                <div class="page-content-card">
+                    <div class="list">
+                        <div class="container-card list-item">
+                            <h5 class="text text-title-card">Pria</h5>
+                            <img src="assets/images/membership/membership.png" alt="" class="image-card">
+                            <ul class="text text-card">
+                                <li>Akses latihan berkala sesuai paket pilihan</li>
+                                <li>Berlaku untuk balita, anak-anak, remaja, hingga dewasa</li>
+                                <li>Tersedia untuk kelas privat, reguler, dan walk-in</li>
+                                <li>Bonus eksklusif: Evaluasi progres & konsultasi gratis</li>
+                            </ul>
+                            <p class="text-description-card">🎯 Rekomendasi untuk: Anda yang ingin latihan renang secara
+                                rutin dengan biaya lebih hemat</p>
+                        </div>
+                        <div class="container-card list-item">
+                            <h5 class="text text-title-card">Wanita</h5>
+                            <img src="assets/images/membership/member-corporate.png" alt="" class="image-card">
+                            <ul class="text text-card">
+                                <li>Program latihan untuk karyawan dengan jadwal fleksibel</li>
+                                <li>Meningkatkan kesehatan, kebugaran, dan produktivitas tim</li>
+                                <li>Bisa diadakan di kolam renang kantor atau lokasi yang disepakati</li>
+                                <li>Bonus eksklusif: Sesi pelatihan water safety & team building</li>
+                            </ul>
+                            <p class="text-description-card">🎯 Rekomendasi untuk: Perusahaan, komunitas, atau
+                                organisasi yang ingin memberikan fasilitas olahraga bagi anggota atau karyawan
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Info button -->
-            <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>
-        </div>
-    </div>
-    <script async src="popup.js"></script>
-    <main class="main">
-        <div class="form-container">
-            <div class="form-title">
-                <h2>Dapatkan Kesempatanmu Sekarang!</h2>
-            </div>
-            <form>
-                <label for="name">Nama</label>
-                <input placeholder="Nama Anda" type="text" id="name" />
-                <label for="phone">No. Handphone</label>
-                <input placeholder="No. Handphone" type="text" id="phone" />
-                <label for="email">Email</label>
-                <input placeholder="Email Anda" type="email" id="email" />
-                <div class="checkbox-group">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <p for="newsletter" class="checkbox-label">Berlangganan Newsletter</p>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <p for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data privasi
-                    </p>
-                </div>
-                <button class="btn-submit" type="submit">DAFTAR</button>
-            </form>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="category-container">
@@ -186,11 +167,4 @@
                     </div>
                 </div>
     </footer>
-    <script>
-        document.querySelector('.header-menu-toggle').addEventListener('click', function () {
-            document.querySelector('.header-menu').classList.toggle('active');
-        });
-    </script>
 </body>
-
-</html>

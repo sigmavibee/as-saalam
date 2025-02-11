@@ -2,78 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Trial</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fasilitas</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon" />
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="style-form.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="style-form.css" />
 </head>
 
 <body>
-    <header class="header">
+    <header class="header-about">
         <div class="container">
-            <div class="cover-background">
-                <img alt="As Salaam Logo" height="100" src="assets/images/logo.png" width="228" />
+            <div class="coverbackground-about">
+                <img alt="As Salaam Logo" src="assets/images/logo.png" />
                 <h1>LET'S GET WET!</h1>
-                <div class="features">
-                    <h1>Ingin belajar renang? Ayo coba gratis sekarang juga</h1>
-                    <li>Kursus renang di kolam dengan standar Olympic</li>
-                    <li>Pelatih berpengalaman dan bersertifikasi internasional</li>
-                    <li>Menggunakan kurikulum aquatic yang telah teruji</li>
-
-                </div>
             </div>
         </div>
     </header>
-    <!-- The Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <!-- Navigation arrows -->
-            <button class="close-popup">&times;</button>
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <main class="main-about">
+        <section class="content-section">
+            <div class="page-content">
+                <img src="assets/images/freetrial-background.png" alt="Sample Image" />
+                <img src="assets/images/freetrial-background.png" alt="Sample Image" />
+                <img src="assets/images/freetrial-background.png" alt="Sample Image" />
+                <div class="text-content">
+                    <h2>Kenapa Harus Belajar Renang?</h2>
+                    <p>Berenang bukan hanya olahraga, tapi juga keterampilan penting untuk keselamatan dan
+                        kesehatan.
+                        Namun, tidak semua orang memiliki akses ke pelatihan renang yang nyaman dan sesuai dengan
+                        nilai-nilai Islami.
 
-            <!-- Slideshow images -->
-            <div>
-                <div class="popup-slide">
-                    <img data-src="assets/images/freetrial/freetrial.png" alt="freetrial Image" width="400px">
-                </div>
-                <div class="popup-slide">
-                    <img data-src="assets/images/freetrial/freetrial-2.png" alt="freetrial Image" width="400px">
-                </div>
-            </div>
-
-            <!-- Info button -->
-            <a href="https://wa.me/+6288902872779" class="popup-button-ads">Info Lebih Lanjut</a>
-        </div>
-    </div>
-    <script async src="popup.js"></script>
-    <main class="main">
-        <div class="form-container">
-            <div class="form-title">
-                <h2>Dapatkan Kesempatanmu Sekarang!</h2>
-            </div>
-            <form>
-                <label for="name">Nama</label>
-                <input placeholder="Nama Anda" type="text" id="name" />
-                <label for="phone">No. Handphone</label>
-                <input placeholder="No. Handphone" type="text" id="phone" />
-                <label for="email">Email</label>
-                <input placeholder="Email Anda" type="email" id="email" />
-                <div class="checkbox-group">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <p for="newsletter" class="checkbox-label">Berlangganan Newsletter</p>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <p for="privacy" class="checkbox-label">Saya sudah baca dan setuju dengan kebijakan data privasi
+                        Kami hadir dengan kursus renang privat untuk balita hingga dewasa, dengan kelas terpisah
+                        untuk
+                        pria & wanita, serta layanan home visit training untuk kenyamanan Anda!
+                    </p>
+                    <h2>Keunggulan Layanan Kami
+                    </h2>
+                    <p>
+                        <li> Privat & Eksklusif – Fokus 100% dengan pelatih profesional <br>
+                        <li> Konsep Syariah – Kelas terpisah untuk pria & wanita <br>
+                        <li> Home Visit Training – Belajar langsung di lokasi Anda <br>
+                        <li> Untuk Semua Usia – Teknik disesuaikan dari balita hingga dewasa
+                    </p>
+                    <h2>Siapa Saja yang Bisa Bergabung?
+                    </h2>
+                    <p>
+                        Kami telah membangun metode belajar berenang bagi Balita & Anak-anak yang dapat Membangun
+                        kepercayaan diri di air dengan teknik yang menyenangkan, selain itu Kelas Dewasa dan
+                        eksklusif
+                        juga kami rancang dengan lingkungan nyaman & aman dengan bimbingan coach yang profesional
                     </p>
                 </div>
-                <button class="btn-submit" type="submit">DAFTAR</button>
-            </form>
-        </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="category-container">
@@ -174,9 +156,11 @@
                         </div>
                         <div class="find-us-info">
                             <p><i class="fas fa-envelope"></i><a href="mailto:assalaamolympicpool@gmail.com"
-                                    target="_blank" rel="noopener noreferrer">: assalaamolympicpool@gmail.com</a></p>
+                                    target="_blank" rel="noopener noreferrer">: assalaamolympicpool@gmail.com</a>
+                            </p>
                             <p><i class="fab fa-facebook"></i><a href="https://www.facebook.com/share/15ik1Lp5an/"
-                                    target="_blank" rel="noopener noreferrer">: Assalaam Olympic Pool Stadium </a></p>
+                                    target="_blank" rel="noopener noreferrer">: Assalaam Olympic Pool Stadium </a>
+                            </p>
                             <p><i class="fab fa-instagram"></i><a href="https://www.instagram.com/assalaamolympicpool/"
                                     target="_blank" rel="noopener noreferrer">: assalaamolympicpool</a></p>
                             <p><i class="fab fa-tiktok"></i><a
@@ -186,11 +170,4 @@
                     </div>
                 </div>
     </footer>
-    <script>
-        document.querySelector('.header-menu-toggle').addEventListener('click', function () {
-            document.querySelector('.header-menu').classList.toggle('active');
-        });
-    </script>
 </body>
-
-</html>
