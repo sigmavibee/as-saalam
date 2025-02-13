@@ -275,6 +275,18 @@ body {
   /* Width of the button */
 }
 
+.btn-submit:hover,
+.btn-submit-ads:hover {
+  background: linear-gradient(90deg, #388e3c, #66bb6a);
+  transform: scale(1.05);
+}
+
+.btn-submit:focus,
+.btn-submit-ads:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
 /* about-page */
 
 .header-about {
@@ -379,6 +391,10 @@ body {
   align-items: center;
 }
 
+.container-card h5 {
+  font-size: 24px;
+}
+
 /*terms*/
 
 .image-card {
@@ -388,12 +404,13 @@ body {
 }
 
 .text-card {
-  margin: 10px 0;
+  padding: 20px;
   text-align: justify;
 }
 
 .text-card li {
-  padding-right: 10px;
+  font-size: 12px;
+  padding-right: 20px;
   margin: 10px 0;
   text-align: justify;
 }
@@ -872,7 +889,7 @@ footer {
 
   .list-item {
     width: 90%; /* Lebar item lebih kecil pada layar kecil */
-    margin: 10px 0; /* Margin vertikal untuk item */
+    /* Margin vertikal untuk item */
   }
 
   .image-card {
@@ -884,7 +901,9 @@ footer {
   }
 
   .text-description-card {
-    font-size: 12px; /* Ukuran font deskripsi lebih kecil */
+    font-size: 12px;
+    text-align: justify;
+    padding: 10px;
   }
 
   /* form */
