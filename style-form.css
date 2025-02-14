@@ -256,23 +256,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Center items horizontally */
+
   padding: 10px;
-  /* Padding around the text */
+
   border: none;
-  /* No border */
+
   border-radius: 50px;
-  /* Rounded corners */
+
   font-size: 16px;
-  /* Font size */
+
   cursor: pointer;
-  /* Pointer cursor on hover */
+
   margin-left: auto;
-  /* Center the button horizontally */
+
   margin-right: auto;
-  /* Center the button horizontally */
+
   width: 50%;
-  /* Width of the button */
 }
 
 .btn-submit:hover,
@@ -395,6 +394,34 @@ body {
   font-size: 24px;
 }
 
+.button-card {
+  position: relative;
+  background-color: #143021;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.button-card:hover {
+  background: linear-gradient(90deg, #388e3c, #66bb6a);
+  transform: scale(1.05);
+}
+
+.button-card:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
 /*terms*/
 
 .image-card {
@@ -409,10 +436,13 @@ body {
 }
 
 .text-card li {
-  font-size: 12px;
-  padding-right: 20px;
-  margin: 10px 0;
+  line-height: 1.8;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: justify;
+  list-style-type: disc;
+  list-style-position: outside;
 }
 
 .text-title-card {
@@ -422,9 +452,11 @@ body {
 }
 
 .text-description-card {
+  padding-right: 20px;
+  padding-left: 20px;
   font-style: italic;
   font-size: 14px;
-  color: #777; /* Warna teks deskripsi */
+  color: #000000; /* Warna teks deskripsi */
 }
 
 /* terms */
@@ -733,6 +765,14 @@ footer {
   border-radius: 10px;
   box-sizing: border-box; /* Include border in the element's total width and height */
 }
+.map-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include border in the element's total width and height */
+}
 
 .close-popup {
   position: absolute;
@@ -896,6 +936,15 @@ footer {
     height: 100%; /* Atur tinggi gambar untuk layar kecil */
   }
 
+  .text-card li {
+    font-size: 12px;
+    margin-left: 25px;
+    padding-left: 0px;
+    text-align: left;
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+
   .text-title-card {
     font-size: 16px; /* Ukuran font judul lebih kecil */
   }
@@ -1036,6 +1085,15 @@ footer {
     padding-left: 40px;
     border-radius: 10px;
     box-sizing: border-box; /* Include border in the element's total width and height */
+  }
+
+  .map-center {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
   }
 
   .close-popup {
@@ -1104,6 +1162,12 @@ footer {
     /* Margin vertikal untuk item */
   }
 
+  .text-card li {
+    font-size: 12px;
+    margin-left: 20px;
+    padding-left: 0px;
+  }
+
   .image-card {
     height: 100%; /* Atur tinggi gambar untuk layar kecil */
   }
@@ -1115,7 +1179,6 @@ footer {
   .text-description-card {
     font-size: 12px;
     text-align: justify;
-    padding: 10px;
   }
 
   /* form */
@@ -1271,23 +1334,7 @@ footer {
   .page-content img {
     width: 100%;
     max-width: 300px;
-  }
-
-  .text-card {
-    padding: 12px;
-  }
-
-  .text-card li {
-    font-size: 12px;
-    padding-right: 8px;
-  }
-
-  .text-title-card {
-    font-size: 18px;
-  }
-
-  .text-description-card {
-    font-size: 13px;
+    margin-left: 5px;
   }
 }
 
