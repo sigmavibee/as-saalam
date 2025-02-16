@@ -1,24 +1,10 @@
 // Get the popup
 var popup = document.getElementById("popup");
 
-// Get all slide images
-var slideImages = document.querySelectorAll(".popup-slide img");
-
 // Open the popup when the page is loaded
 window.onload = function () {
     popup.style.display = "block";
-    slideIndex = 0;
-    loadPopupImages(); // Load images only when popup opens
-    showSlides(slideIndex);
-}
-
-// Function to load images lazily
-function loadPopupImages() {
-    slideImages.forEach(img => {
-        if (!img.src) {
-            img.src = img.getAttribute("data-src"); // Set src from data-src
-        }
-    });
+    fetchImages(); // Fetch images when the popup opens
 }
 
 // Close the popup when clicking outside
@@ -32,39 +18,56 @@ document.querySelector('.close-popup').addEventListener('click', function () {
 });
 
 // Slideshow functionality
-var slideIndex = 0;
+let currentSlide = 0;
+let images = [];
 var slides = document.getElementsByClassName("popup-slide");
 
-function showSlides(index) {
-    // Hide all slides
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    // Show the current slide
-    slides[index].style.display = "block";
+function fetchImages() {
+    fetch('get-images.php')
+        .then(response => response.json())
+        .then(data => {
+            console.log("Data received:", data); // Periksa data
+            images = data.map(image => `assets/images/freetrial/${image}`);
+            console.log("Image paths:", images); // Periksa path gambar
+            showSlide(currentSlide);
+        })
+        .catch(error => console.error('Error fetching images:', error));
+}
 
-    // Lazy load only the current slide's image
+function showSlides(index) {
+    // Pastikan slides[index] ada
+    if (!slides[index]) {
+        console.error("Slide not found at index:", index);
+        return;
+    }
+
+    // Cari elemen <img> di dalam slide
     var currentImg = slides[index].querySelector("img");
-    if (!currentImg.src) {
+    if (!currentImg) {
+        console.error("Image not found in slide:", index);
+        return;
+    }
+
+    // Lazy load gambar jika src belum di-set
+    if (!currentImg.src && currentImg.hasAttribute("data-src")) {
         currentImg.src = currentImg.getAttribute("data-src");
     }
 }
 
 function changeSlide(n) {
-    slideIndex += n;
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    } else if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
-    showSlides(slideIndex);
+    currentSlide += n;
+    if (currentSlide < 0) currentSlide = images.length - 1;
+    if (currentSlide >= images.length) currentSlide = 0;
+    showSlide(currentSlide);
 }
+
+document.addEventListener('DOMContentLoaded', fetchImages);
 
 // Automatically cycle through slides
 setInterval(function () {
-    slideIndex++;
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
+    currentSlide++;
+    if (currentSlide >= images.length) {
+        currentSlide = 0;
     }
-    showSlides(slideIndex);
+    showSlide(currentSlide);
 }, 10000); // Change image every 10 seconds
