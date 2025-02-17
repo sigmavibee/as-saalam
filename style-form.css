@@ -524,12 +524,6 @@ body {
   text-align: justify;
 }
 
-@media (max-width: 480px) {
-  .terms-container {
-    width: 90%;
-  }
-}
-
 /* footer */
 
 .category-container {
@@ -624,6 +618,7 @@ body {
   text-decoration: none;
 }
 
+/* Popup container */
 .popup {
   display: none;
   /* Hidden by default */
@@ -904,6 +899,10 @@ footer {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 480px) {
+  .terms-container {
+    width: 90%;
+  }
+
   /* header */
   .header h1 {
     font-size: 30px;

@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="style-form.css" />
 </head>
-<script>document.addEventListener("DOMContentLoaded", function () {
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         fetch("get_images.php?page=swimschool")
             .then(response => response.json())
             .then(images => {
                 let popupContainer = document.querySelector(".popup-content div");
 
-                images.forEach(imgSrc => {
+                images.forEach((imgSrc, index) => {
                     let slide = document.createElement("div");
                     slide.classList.add("popup-slide");
+                    if (index === 0) slide.classList.add("active");
 
                     let img = document.createElement("img");
                     img.src = imgSrc;
@@ -28,6 +30,39 @@
                     slide.appendChild(img);
                     popupContainer.appendChild(slide);
                 });
+
+                let currentSlide = 0;
+                const slides = document.querySelectorAll(".popup-slide");
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? "block" : "none";
+                    });
+                }
+
+                function closePopup() {
+                    document.getElementById("popup").style.display = "none";
+                }
+
+                document.querySelector(".close-popup").addEventListener("click", closePopup);
+
+                window.addEventListener("click", function (event) {
+                    if (event.target === document.getElementById("popup")) {
+                        closePopup();
+                    }
+                });
+
+                document.querySelector(".prev").addEventListener("click", () => {
+                    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+                    showSlide(currentSlide);
+                });
+
+                document.querySelector(".next").addEventListener("click", () => {
+                    currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+                    showSlide(currentSlide);
+                });
+
+                showSlide(currentSlide);
             })
             .catch(error => console.error("Error fetching images:", error));
     });
