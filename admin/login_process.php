@@ -1,43 +1,47 @@
 <?php
-session_start();
+require 'koneksi.php';
 
-// Koneksi ke database
-$conn = new mysqli('localhost', 'root', '', 'assalam_database');
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    // Gunakan prepared statements untuk menghindari SQL injection
+    $stmt = $conn->prepare("SELECT * FROM admin WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari form login
-    $username = $_POST['username'];
-    $password = $_POST['password']; // Ambil password tanpa hashing
-
-    // Query untuk mencari admin berdasarkan username
-    $sql = "SELECT id, username, password FROM admin WHERE username = '$username'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows == 1) {
+    if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-
         // Verifikasi password
-        if (password_verify($password, $row['password'])) { // Verifikasi password
-            // Password cocok, buat session
-            $_SESSION['login_user'] = $row['username'];
-            header("location: dashboard.php"); // Redirect ke halaman dashboard
+        session_start(); // Mulai session
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['username'] = $username; // Simpan username ke session
+            header("location: dashboard.php");
+            exit();
         } else {
-            // Password tidak cocok
-            $error = "Password salah!";
-            header("location: index.php?error=" . urlencode($error));
+            echo '<center>
+                <h1>Username atau Password Salah</h1>
+                <p>Silahkan login kembali.</p>
+                <strong>
+                    <button style="padding: 10px 20px; font-size: 16px;">
+                        <a href="index.php" style="text-decoration: none; color: red;">Kembali ke Halaman Login</a>
+                    </button>
+                </strong>
+              </center>';
         }
     } else {
-        // Username tidak ditemukan
-        $error = "Username tidak ditemukan!";
-        header("location: index.php?error=" . urlencode($error));
+        echo '<center>
+            <h1>Username atau Password Salah</h1>
+            <p>Silahkan login kembali.</p>
+            <strong>
+                <button style="padding: 10px 20px; font-size: 16px;">
+                    <a href="index.php" style="text-decoration: none; color: red;">Kembali ke Halaman Login</a>
+                </button>
+            </strong>
+          </center>';
     }
-}
 
-// Tutup koneksi
-$conn->close();
+    $stmt->close();
+}
 ?>

@@ -829,6 +829,30 @@ footer {
   padding-left: 40px;
 }
 
+/* fasilitas */
+
+.card-container-facility {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+.card-facility {
+  background-color: #f9f9f9; /* Light background for cards */
+  border: 1px solid #ddd; /* Border around cards */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 10px;
+  overflow: hidden; /* Prevent overflow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-facility img {
+  width: 100%; /* Make image fill the card */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom space */
+}
+
 /* faq */
 .faq-container {
   max-width: 700px;

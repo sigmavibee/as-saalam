@@ -1,3 +1,8 @@
+<?php
+session_start(); // Mulai session
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Pengguna'; // Ambil username dari session
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +68,7 @@
             </select>
             <br>
         </div>
-        <button onclick="window.location.href='logout.php'">Logout</button>
+        <button type="button" onclick="window.location.href='logout.php'">Logout</button>
                 <!-- Tombol Submit -->
         <button type="submit">Proses</button>
     </form>
