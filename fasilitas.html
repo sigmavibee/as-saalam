@@ -31,35 +31,76 @@
                 <div class="card-container-facility">
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Fasilitas 1" />
+                        <h2>Free Parking</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Fasilitas 2" />
+                        <h2>Free Loker</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Fasilitas 3" />
+                        <h2>Ruang Ganti dan Bilas</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Fasilitas 4" />
+                        <h2>Tribun</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Fasilitas 5" />
+                        <h2>Kolam Olympic</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Fasilitas 6" />
+                        <h2>Kolam Pemanasan</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Fasilitas 7" />
+                        <h2>Kolam Anak</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Fasilitas 8" />
+                        <h2>Training Room</h2>
                     </div>
                     <div class="card-facility">
                         <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Fasilitas 9" />
+                        <h2>Free Workout Space</h2>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script>
+        document.querySelectorAll('.card-facility img').forEach(img => {
+            img.style.cursor = 'pointer';
+        });
+        document.querySelectorAll('.card-facility img').forEach(img => {
+            img.addEventListener('click', () => {
+                const fullscreenDiv = document.createElement('div');
+                fullscreenDiv.style.position = 'fixed';
+                fullscreenDiv.style.top = '0';
+                fullscreenDiv.style.left = '0';
+                fullscreenDiv.style.width = '100%';
+                fullscreenDiv.style.height = '100%';
+                fullscreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                fullscreenDiv.style.display = 'flex';
+                fullscreenDiv.style.justifyContent = 'center';
+                fullscreenDiv.style.alignItems = 'center';
+                fullscreenDiv.style.zIndex = '1000';
+
+                const fullscreenImg = document.createElement('img');
+                fullscreenImg.src = img.src;
+                fullscreenImg.style.maxWidth = '90%';
+                fullscreenImg.style.maxHeight = '90%';
+
+                fullscreenDiv.appendChild(fullscreenImg);
+                document.body.appendChild(fullscreenDiv);
+
+                fullscreenDiv.addEventListener('click', () => {
+                    document.body.removeChild(fullscreenDiv);
+                });
+            });
+        });
+    </script>
     <footer>
         <div class="category-container">
             <div class="category-foot" id="get-wet">

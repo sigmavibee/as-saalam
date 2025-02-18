@@ -853,6 +853,11 @@ footer {
   display: block; /* Remove bottom space */
 }
 
+.card-facility h2 {
+  text-align: center;
+  color: black;
+}
+
 /* faq */
 .faq-container {
   max-width: 700px;
