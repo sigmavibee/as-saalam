@@ -20,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Cek apakah username sudah ada
     $check_query = "SELECT * FROM admin WHERE username = '$username'";
-    $check_result = mysqli_query($conn, $check_query);
+    $check_result = psql_query($conn, $check_query);
 
-    if (mysqli_num_rows($check_result) > 0) {
+    if (psql_num_rows($check_result) > 0) {
         echo '<center>
                 <h1>Username sudah terdaftar</h1>
                 <strong>
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Simpan data ke database
         $insert_query = "INSERT INTO admin (username, password) VALUES ('$username', '$hashed_password')";
-        if (mysqli_query($conn, $insert_query)) {
+        if (psql_query($conn, $insert_query)) {
             echo '<center>
                     <h1>Registrasi Berhasil</h1>
                     <p>Silahkan login dengan akun Anda.</p>
