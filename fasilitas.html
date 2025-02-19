@@ -30,39 +30,39 @@
                 </p>
                 <div class="card-container-facility">
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Fasilitas 1" />
+                        <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Free Parking" />
                         <h2>Free Parking</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Fasilitas 2" />
+                        <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Free Loker" />
                         <h2>Free Loker</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Fasilitas 3" />
+                        <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Ruang Ganti dan Bilas" />
                         <h2>Ruang Ganti dan Bilas</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Fasilitas 4" />
+                        <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Tribun" />
                         <h2>Tribun</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Fasilitas 5" />
+                        <img src="assets/images/fasilitas/kolam_olympic.jpg" alt="Kolam Olympic" />
                         <h2>Kolam Olympic</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Fasilitas 6" />
+                        <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Kolam Pemanasan" />
                         <h2>Kolam Pemanasan</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Fasilitas 7" />
+                        <img src="assets/images/fasilitas/fasilitas-1.jpg" alt="Kolam Anak" />
                         <h2>Kolam Anak</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Fasilitas 8" />
+                        <img src="assets/images/fasilitas/fasilitas-2.jpg" alt="Training Room" />
                         <h2>Training Room</h2>
                     </div>
                     <div class="card-facility">
-                        <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Fasilitas 9" />
+                        <img src="assets/images/fasilitas/fasilitas-3.jpg" alt="Free Workout Space" />
                         <h2>Free Workout Space</h2>
                     </div>
                 </div>
@@ -70,6 +70,7 @@
         </section>
     </main>
     <script>
+
         document.querySelectorAll('.card-facility img').forEach(img => {
             img.style.cursor = 'pointer';
         });
@@ -96,6 +97,20 @@
                 document.body.appendChild(fullscreenDiv);
 
                 fullscreenDiv.addEventListener('click', () => {
+                    document.body.removeChild(fullscreenDiv);
+                });
+                const closeButton = document.createElement('span');
+                closeButton.innerHTML = '&times;';
+                closeButton.style.position = 'absolute';
+                closeButton.style.top = '10px';
+                closeButton.style.right = '20px';
+                closeButton.style.fontSize = '30px';
+                closeButton.style.color = 'white';
+                closeButton.style.cursor = 'pointer';
+
+                fullscreenDiv.appendChild(closeButton);
+
+                closeButton.addEventListener('click', () => {
                     document.body.removeChild(fullscreenDiv);
                 });
             });

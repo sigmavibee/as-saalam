@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$database = 'assalam_database';
+$servername = "dpg-cuqp8gdds78s7380m5gg-a";
+$database = 'as_salam';
 $username = 'root';
-$password = '';
+$password = '8V3KtV4IkR1MsvjPIyX1AtZ9qEpvmxBb';
 
 $conn =mysqli_connect($servername, $username, $password, $database);
 
