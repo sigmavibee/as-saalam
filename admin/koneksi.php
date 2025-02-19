@@ -4,11 +4,12 @@ $database = 'as_salam';
 $username = 'root';
 $password = '8V3KtV4IkR1MsvjPIyX1AtZ9qEpvmxBb';
 
-$conn =psql_connect($servername, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . psql_connect_error());
-} else {
+try {
+    // Membuat koneksi menggunakan PDO
+    $conn = new PDO("pgsql:host=$servername;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 ?>

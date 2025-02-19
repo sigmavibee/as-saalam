@@ -19,10 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Cek apakah username sudah ada
-    $check_query = "SELECT * FROM admin WHERE username = '$username'";
-    $check_result = psql_query($conn, $check_query);
+    $check_query = "SELECT * FROM admin WHERE username = $1";
+    $check_result = pg_query_params($conn, $check_query, array($username));
 
-    if (psql_num_rows($check_result) > 0) {
+    if (pg_num_rows($check_result) > 0) {
         echo '<center>
                 <h1>Username sudah terdaftar</h1>
                 <strong>
@@ -36,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Simpan data ke database
-        $insert_query = "INSERT INTO admin (username, password) VALUES ('$username', '$hashed_password')";
-        if (psql_query($conn, $insert_query)) {
+        $insert_query = "INSERT INTO admin (username, password) VALUES ($1, $2)";
+        if (pg_query_params($conn, $insert_query, array($username, $hashed_password))) {
             echo '<center>
                     <h1>Registrasi Berhasil</h1>
                     <p>Silahkan login dengan akun Anda.</p>
