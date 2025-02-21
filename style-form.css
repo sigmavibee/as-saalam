@@ -1079,6 +1079,11 @@ footer {
     font-size: 12px;
   }
 
+  /* fasilitas */
+  .card-container-facility {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+
   #get-wet {
     order: 1; /* First item */
   }

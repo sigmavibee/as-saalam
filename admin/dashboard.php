@@ -20,8 +20,8 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Pengguna'; /
     <!-- Form untuk Add, Update, atau Delete -->
     <form action="manage_images.php" method="post" enctype="multipart/form-data">
         <!-- Pilih Aksi (Add, Update, atau Delete) -->
-        <label for="action">Pilih Aksi:</label>
-        <select name="action" id="action" required>
+        <label for="action" style="display: block; margin-bottom: 10px;">Pilih Aksi:</label>
+        <select name="action" id="action" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
             <option value="add">Tambah Gambar Baru</option>
             <option value="update">Update Gambar yang Sudah Ada</option>
             <option value="delete">Hapus Gambar</option>
@@ -37,34 +37,40 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Pengguna'; /
 
         <!-- Folder Tujuan (Hanya untuk Add) -->
         <div id="addSection">
-            <label for="targetDirectory">Pilih Folder Tujuan:</label>
-            <select name="targetDirectory" id="targetDirectory">
+            <label for="targetDirectory" style="display: block; margin-bottom: 10px;">Pilih Folder Tujuan:</label>
+            <select name="targetDirectory" id="targetDirectory" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
                 <option value="../assets/images/fasilitas/">Fasilitas</option>
                 <option value="../assets/images/freetrial/">Freetrial</option>
                 <option value="../assets/images/jadwal/">Jadwal</option>
+                <option value="../assets/images/kelas/">Kelas</option>
                 <option value="../assets/images/lokasi/">Lokasi</option>
                 <option value="../assets/images/membership/">Membership</option>
+                <option value="../assets/images/personal_training/">Personal Training</option>
+                <option value="../assets/images/stadium_profile/">Stadium Profile</option>
                 <option value="../assets/images/swimschool/">Swimschool</option>
             </select>
             <br>
         </div>
 
         <!-- Pilih File yang Akan Ditimpa atau Dihapus (Hanya untuk Update dan Delete) -->
-        <div id="updateDeleteSection" style="display: none;">
-            <label for="targetDirectoryUpdateDelete">Pilih Folder:</label>
-            <select name="targetDirectoryUpdateDelete" id="targetDirectoryUpdateDelete">
-                <option value="../assets/images/fasilitas/">Fasilitas</option>
-                <option value="../assets/images/freetrial/">Freetrial</option>
-                <option value="../assets/images/jadwal/">Jadwal</option>
-                <option value="../assets/images/lokasi/">Lokasi</option>
-                <option value="../assets/images/membership/">Membership</option>
-                <option value="../assets/images/swimschool/">Swimschool</option>
+        <div id="updateDeleteSection" style="display: none; margin-top: 20px;">
+            <label for="targetDirectoryUpdateDelete" style="display: block; margin-bottom: 10px;">Pilih Folder:</label>
+            <select name="targetDirectoryUpdateDelete" id="targetDirectoryUpdateDelete" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="../assets/images/fasilitas/">Fasilitas</option>
+            <option value="../assets/images/freetrial/">Freetrial</option>
+            <option value="../assets/images/jadwal/">Jadwal</option>
+            <option value="../assets/images/kelas/">Kelas</option>
+            <option value="../assets/images/lokasi/">Lokasi</option>
+            <option value="../assets/images/membership/">Membership</option>
+            <option value="../assets/images/personal_training/">Personal Training</option>
+            <option value="../assets/images/stadium_profile/">Stadium Profile</option>
+            <option value="../assets/images/swimschool/">Swimschool</option>
             </select>
-            <br>
+            <br><br>
 
-            <label for="existingFile">Pilih File:</label>
-            <select name="existingFile" id="existingFile">
-                <!-- Daftar file akan diisi oleh JavaScript -->
+            <label for="existingFile" style="display: block; margin-bottom: 10px;">Pilih File:</label>
+            <select name="existingFile" id="existingFile" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 10px;">
+            <!-- Daftar file akan diisi oleh JavaScript -->
             </select>
             <br>
         </div>
