@@ -840,16 +840,14 @@ footer {
 
 .card-facility {
   background-color: #f9f9f9; /* Light background for cards */
-  border: 1px solid #ddd; /* Border around cards */
-  border-radius: 8px; /* Rounded corners */
-  padding: 10px 10px;
-  overflow: hidden; /* Prevent overflow */
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .card-facility img {
+  border-radius: 8px;
   width: 100%; /* Make image fill the card */
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Maintain aspect ratio */
   display: block; /* Remove bottom space */
 }
 
