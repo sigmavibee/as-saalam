@@ -242,8 +242,55 @@
                         </div>
                     </div>
                 </div>
-
     </footer>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const newsletter = document.getElementById("newsletter").checked ? "Ya" : "Tidak";
+            const privacy = document.getElementById("privacy").checked ? "Ya" : "Tidak";
+
+            // Save form data to local storage
+            localStorage.setItem("name", name);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("email", email);
+            localStorage.setItem("newsletter", newsletter);
+            localStorage.setItem("privacy", privacy);
+
+            const message = `Saya ingin bertanya lebih detail terkait dengan Layanan Swim School As Salaam Olympic pool,
+Nama: ${name}
+No. Handphone: ${phone}
+Email: ${email}
+Berlangganan Newsletter: ${newsletter}
+*Layanan Swim School*`;
+
+            const whatsappUrl = `https://wa.me/6288902872779?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank");
+        });
+
+        // Load form data from local storage
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("name")) {
+                document.getElementById("name").value = localStorage.getItem("name");
+            }
+            if (localStorage.getItem("phone")) {
+                document.getElementById("phone").value = localStorage.getItem("phone");
+            }
+            if (localStorage.getItem("email")) {
+                document.getElementById("email").value = localStorage.getItem("email");
+            }
+            if (localStorage.getItem("newsletter") === "Ya") {
+                document.getElementById("newsletter").checked = true;
+            }
+            if (localStorage.getItem("privacy") === "Ya") {
+                document.getElementById("privacy").checked = true;
+            }
+        });
+    </script>
+
 </body>
 
 </html>
