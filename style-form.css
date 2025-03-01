@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
 
+html {
+  scroll-behavior: smooth; /* Menambahkan efek scroll halus */
+}
 /* font styles */
 h1 {
   color: yellow;
@@ -367,7 +370,7 @@ body {
 
 .list-item {
   flex: 1 1 calc(33.33% - 30px);
-  background-color: white;
+  background-color: transparent;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: 15px; /* Margin di sekitar item */
@@ -433,6 +436,10 @@ body {
 .text-card {
   padding: 20px;
   text-align: justify;
+}
+.text-card h4 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .text-card li {
@@ -854,6 +861,45 @@ footer {
 .card-facility h2 {
   text-align: center;
   color: black;
+}
+
+.carousel-container {
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Lebar penuh untuk tampilan yang lebih baik */
+  height: 550px; /* Tinggi yang lebih besar untuk menampung gambar */
+  margin: auto; /* Pusatkan carousel */
+  border-radius: 15px; /* Sudut yang lebih halus */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animasi transisi */
+}
+
+.carousel-item {
+  min-width: 100%; /* Setiap item mengambil lebar penuh */
+  box-sizing: border-box; /* Menghitung padding dalam lebar */
+  display: flex; /* Memungkinkan penataan gambar di tengah */
+  justify-content: center; /* Pusatkan gambar */
+  align-items: center; /* Pusatkan gambar secara vertikal */
+  border-radius: 15px; /* Sudut item carousel yang lebih halus */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari sudut */
+}
+
+.carousel img {
+  width: auto; /* Biarkan lebar otomatis untuk mempertahankan rasio aspek */
+  max-height: 90%; /* Pastikan gambar tidak melebihi tinggi item */
+  max-width: 90%; /* Pastikan gambar tidak melebihi lebar item */
+  border-radius: 10px; /* Sudut gambar yang lebih halus */
+  transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.carousel img:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
 }
 
 /* faq */
